@@ -61,7 +61,7 @@
 // Vendors Styles
 @import "vendors/vendors";
 
-// Core Styles
+// CoreUI Styles
 // Additional typography
 @import "core/typography";
 
@@ -91,5 +91,8 @@
 // Mobile View
 @import "core/mobile";
 
+// UI Kits
+@import "uikits/uikits";
+
 // Custom styles
-@import "core/custom"
+@import "core/custom";

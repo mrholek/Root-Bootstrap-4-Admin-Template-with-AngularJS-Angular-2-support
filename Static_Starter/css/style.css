@@ -1,14 +1,15 @@
 /**
  * GenesisUI - Bootstrap 4 Admin Template
- * @version v1.5.0
+ * @version v1.5.5
  * @link https://genesisui.com
  * Copyright (c) 2016 creativeLabs Łukasz Holeczek
  * @license Commercial
  */
 @charset "UTF-8";
-/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
+  line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
@@ -47,7 +48,8 @@ template,
   display: none; }
 
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
 
 a:active,
 a:hover {
@@ -116,36 +118,22 @@ hr {
 
 button,
 input,
+optgroup,
 select,
 textarea {
-  font: inherit; }
+  font: inherit;
+  margin: 0; }
 
 optgroup {
   font-weight: bold; }
 
 button,
-input,
-select {
+input {
   overflow: visible; }
-
-button,
-input,
-select,
-textarea {
-  margin: 0; }
 
 button,
 select {
   text-transform: none; }
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  cursor: pointer; }
-
-[disabled] {
-  cursor: default; }
 
 button,
 html [type="button"],
@@ -154,12 +142,16 @@ html [type="button"],
   -webkit-appearance: button; }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0; }
 
 button:-moz-focusring,
-input:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 fieldset {
@@ -188,18 +180,30 @@ textarea {
   height: auto; }
 
 [type="search"] {
-  -webkit-appearance: textfield; }
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
 
 @media print {
   *,
   *::before,
   *::after,
   *::first-letter,
-  *::first-line {
+  p::first-line,
+  div::first-line,
+  blockquote::first-line,
+  li::first-line {
     text-shadow: none !important;
     box-shadow: none !important; }
   a,
@@ -207,6 +211,8 @@ textarea {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
+  pre {
+    white-space: pre-wrap !important; }
   pre,
   blockquote {
     border: 1px solid #999;
@@ -377,9 +383,7 @@ input,
 button,
 select,
 textarea {
-  margin: 0;
-  line-height: inherit;
-  border-radius: 0; }
+  line-height: inherit; }
 
 input[type="radio"]:disabled,
 input[type="checkbox"]:disabled {
@@ -625,18 +629,50 @@ pre {
     clear: both; }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  margin-left: -15px; }
   .row::after {
     content: "";
     display: table;
     clear: both; }
+  @media (min-width: 544px) {
+    .row {
+      margin-right: -15px;
+      margin-left: -15px; } }
+  @media (min-width: 768px) {
+    .row {
+      margin-right: -15px;
+      margin-left: -15px; } }
+  @media (min-width: 992px) {
+    .row {
+      margin-right: -15px;
+      margin-left: -15px; } }
+  @media (min-width: 1200px) {
+    .row {
+      margin-right: -15px;
+      margin-left: -15px; } }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px; }
+  @media (min-width: 544px) {
+    .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  @media (min-width: 768px) {
+    .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  @media (min-width: 992px) {
+    .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  @media (min-width: 1200px) {
+    .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 .col-xs-1 {
   float: left;
@@ -1420,6 +1456,7 @@ pre {
   background-image: none;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
   .form-control::-ms-expand, .daterangepicker .input-mini::-ms-expand, .input-group > .ui-select-bootstrap > input.ui-select-search.form-control::-ms-expand, .input-group > .ui-select-bootstrap > input.ui-select-search.form-control.direction-up::-ms-expand {
     background-color: transparent;
@@ -1548,6 +1585,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .form-check-inline + .form-check-inline {
     margin-left: .75rem; }
   .form-check-inline.disabled {
+    color: #818a91;
     cursor: not-allowed; }
 
 .form-control-feedback {
@@ -1580,7 +1618,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #4dbd74; }
 
 .has-success .form-control-success {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='$form-icon-success-color' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
 
 .has-warning .form-control-feedback,
 .has-warning .form-control-label,
@@ -1601,7 +1639,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #f8cb00; }
 
 .has-warning .form-control-warning {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#f8cb00' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"); }
 
 .has-danger .form-control-feedback,
 .has-danger .form-control-label,
@@ -1622,7 +1660,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #f86c6b; }
 
 .has-danger .form-control-danger {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#f86c6b' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
 
 @media (min-width: 544px) {
   .form-inline .form-group {
@@ -2129,6 +2167,12 @@ input[type="button"].btn-block {
   .collapse.in {
     display: block; }
 
+tr.collapse.in {
+  display: table-row; }
+
+tbody.collapse.in {
+  display: table-row-group; }
+
 .collapsing {
   position: relative;
   height: 0;
@@ -2166,9 +2210,9 @@ input[type="button"].btn-block {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 10rem;
   padding: 0 0;
-  margin: 2px 0 0;
+  margin: 0.125rem 0 0;
   font-size: 0.875rem;
   color: #2a2c36;
   text-align: left;
@@ -2186,7 +2230,7 @@ input[type="button"].btn-block {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 3px 20px;
+  padding: 3px 1.5rem;
   clear: both;
   font-weight: normal;
   color: #2a2c36;
@@ -2228,7 +2272,8 @@ input[type="button"].btn-block {
 
 .dropdown-header {
   display: block;
-  padding: 0 20px;
+  padding: 0 1.5rem;
+  margin-bottom: 0;
   font-size: 0.875rem;
   color: #818a91;
   white-space: nowrap; }
@@ -2251,7 +2296,7 @@ input[type="button"].btn-block {
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
   bottom: 100%;
-  margin-bottom: 2px; }
+  margin-bottom: 0.125rem; }
 
 .dropdown-item {
   position: relative;
@@ -2292,7 +2337,8 @@ input[type="button"].btn-block {
   .btn-group-vertical > .btn, .fc
   .btn-group-vertical > button {
     position: relative;
-    float: left; }
+    float: left;
+    margin-bottom: 0; }
     .btn-group > .btn:focus, .fc-button-group > .btn:focus, .fc .btn-group > button:focus, .fc .fc-button-group > button:focus, .btn-group > .btn:active, .fc-button-group > .btn:active, .fc .btn-group > button:active, .fc .fc-button-group > button:active, .btn-group > .btn.active, .fc-button-group > .btn.active, .fc .btn-group > button.active, .fc .fc-button-group > button.active,
     .btn-group-vertical > .btn:focus, .fc
     .btn-group-vertical > button:focus,
@@ -2672,10 +2718,13 @@ input[type="button"].btn-block {
     content: "\00a0"; }
 
 .navbar-toggler {
+  width: 2.5em;
+  height: 2em;
   padding: .5rem .75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background: none;
+  background: transparent no-repeat center center;
+  background-size: 24px 24px;
   border: 1px solid transparent; }
   .navbar-toggler:focus, .navbar-toggler:hover {
     text-decoration: none; }
@@ -2715,6 +2764,9 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .nav-link.active:hover {
   color: rgba(0, 0, 0, 0.8); }
 
+.navbar-light .navbar-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.3)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
 .navbar-light .navbar-divider {
   background-color: rgba(0, 0, 0, 0.075); }
 
@@ -2739,6 +2791,9 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .nav-link.active:focus,
 .navbar-dark .navbar-nav .nav-link.active:hover {
   color: white; }
+
+.navbar-dark .navbar-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
 .navbar-dark .navbar-divider {
   background-color: rgba(255, 255, 255, 0.075); }
@@ -2893,6 +2948,7 @@ header.navbar .navbar-nav .nav-link {
 
 .card-header {
   padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
   background-color: #f8f9fa;
   border-bottom: 1px solid #d1d4d7; }
   .card-header::after {
@@ -3042,10 +3098,11 @@ header.navbar .navbar-nav .nav-link {
     column-count: 3;
     column-gap: 1.25rem; }
     .card-columns .card {
+      display: inline-block;
       width: 100%; } }
 
 .card {
-  margin-bottom: 20px; }
+  margin-bottom: 1.5rem; }
 
 .card-header i.icon-bg {
   display: inline-block;
@@ -3193,6 +3250,39 @@ header.navbar .navbar-nav .nav-link {
     .card-inverse .progress .progress-bar {
       background-color: #fff !important; } }
 
+[class*="card-outline-"] .card-block {
+  background: #fff !important; }
+
+[class*="card-outline-"].card-outline-top {
+  border-top-width: 2px;
+  border-right-color: #d1d4d7;
+  border-bottom-color: #d1d4d7;
+  border-left-color: #d1d4d7; }
+
+.card-accent-primary {
+  border-top-width: 2px;
+  border-top-color: #20a8d8; }
+
+.card-accent-secondary {
+  border-top-width: 2px;
+  border-top-color: #ccc; }
+
+.card-accent-info {
+  border-top-width: 2px;
+  border-top-color: #63c2de; }
+
+.card-accent-success {
+  border-top-width: 2px;
+  border-top-color: #4dbd74; }
+
+.card-accent-warning {
+  border-top-width: 2px;
+  border-top-color: #f8cb00; }
+
+.card-accent-danger {
+  border-top-width: 2px;
+  border-top-color: #f86c6b; }
+
 .card-header > i {
   margin-right: 0.5rem; }
 
@@ -3252,6 +3342,9 @@ header.navbar .navbar-nav .nav-link {
       -webkit-column-count: 2;
       column-count: 2; } }
 
+.card-group {
+  margin-bottom: 1.5rem; }
+
 .breadcrumb {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -3279,7 +3372,7 @@ header.navbar .navbar-nav .nav-link {
 
 .breadcrumb {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   border-bottom: 1px solid #d1d4d7; }
 
 .pagination {
@@ -3823,8 +3916,7 @@ button.close {
   z-index: 1050;
   display: none;
   overflow: hidden;
-  outline: 0;
-  -webkit-overflow-scrolling: touch; }
+  outline: 0; }
   .modal.fade .modal-dialog {
     transition: transform .3s ease-out;
     transform: translate(0, -25%); }
@@ -4604,6 +4696,12 @@ a.text-warning:focus, a.text-warning:hover {
 
 a.text-danger:focus, a.text-danger:hover {
   color: #f63c3a !important; }
+
+.text-gray-dark {
+  color: #2a2c36 !important; }
+
+a.text-gray-dark:focus, a.text-gray-dark:hover {
+  color: #141519 !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -8413,12 +8511,17 @@ nav.top-nav {
   color: #2a2c36;
   background: #fff;
   border-left: 1px solid #d1d4d7; }
-  .aside-menu .nav-tabs .nav-link {
-    padding: 0.75rem 1rem;
-    color: #2a2c36;
-    border-top: 0; }
-  .aside-menu .nav-tabs .nav-item:first-child .nav-link {
-    border-left: 0; }
+  .aside-menu .nav-tabs {
+    border-color: #d1d4d7; }
+    .aside-menu .nav-tabs .nav-link {
+      padding: 0.75rem 1rem;
+      color: #2a2c36;
+      border-top: 0; }
+      .aside-menu .nav-tabs .nav-link.active {
+        border-right-color: #d1d4d7;
+        border-left-color: #d1d4d7; }
+    .aside-menu .nav-tabs .nav-item:first-child .nav-link {
+      border-left: 0; }
   .aside-menu .tab-content {
     position: relative;
     height: calc(100vh - 2.375rem - 55px);
@@ -8815,31 +8918,31 @@ footer.footer {
   font-size: 0.875rem;
   line-height: 1.5;
   border: 0; }
-  .btn-facebook:before,
-  .btn-twitter:before,
-  .btn-linkedin:before,
-  .btn-flickr:before,
-  .btn-tumblr:before,
-  .btn-xing:before,
-  .btn-github:before,
-  .btn-html5:before,
-  .btn-openid:before,
-  .btn-stack-overflow:before,
-  .btn-youtube:before,
-  .btn-css3:before,
-  .btn-dribbble:before,
-  .btn-google-plus:before,
-  .btn-instagram:before,
-  .btn-pinterest:before,
-  .btn-vk:before,
-  .btn-yahoo:before,
-  .btn-behance:before,
-  .btn-dropbox:before,
-  .btn-reddit:before,
-  .btn-spotify:before,
-  .btn-vine:before,
-  .btn-foursquare:before,
-  .btn-vimeo:before {
+  .btn-facebook::before,
+  .btn-twitter::before,
+  .btn-linkedin::before,
+  .btn-flickr::before,
+  .btn-tumblr::before,
+  .btn-xing::before,
+  .btn-github::before,
+  .btn-html5::before,
+  .btn-openid::before,
+  .btn-stack-overflow::before,
+  .btn-youtube::before,
+  .btn-css3::before,
+  .btn-dribbble::before,
+  .btn-google-plus::before,
+  .btn-instagram::before,
+  .btn-pinterest::before,
+  .btn-vk::before,
+  .btn-yahoo::before,
+  .btn-behance::before,
+  .btn-dropbox::before,
+  .btn-reddit::before,
+  .btn-spotify::before,
+  .btn-vine::before,
+  .btn-foursquare::before,
+  .btn-vimeo::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -8901,31 +9004,31 @@ footer.footer {
   .btn-foursquare.icon span,
   .btn-vimeo.icon span {
     display: none; }
-  .btn-facebook.text:before,
-  .btn-twitter.text:before,
-  .btn-linkedin.text:before,
-  .btn-flickr.text:before,
-  .btn-tumblr.text:before,
-  .btn-xing.text:before,
-  .btn-github.text:before,
-  .btn-html5.text:before,
-  .btn-openid.text:before,
-  .btn-stack-overflow.text:before,
-  .btn-youtube.text:before,
-  .btn-css3.text:before,
-  .btn-dribbble.text:before,
-  .btn-google-plus.text:before,
-  .btn-instagram.text:before,
-  .btn-pinterest.text:before,
-  .btn-vk.text:before,
-  .btn-yahoo.text:before,
-  .btn-behance.text:before,
-  .btn-dropbox.text:before,
-  .btn-reddit.text:before,
-  .btn-spotify.text:before,
-  .btn-vine.text:before,
-  .btn-foursquare.text:before,
-  .btn-vimeo.text:before {
+  .btn-facebook.text::before,
+  .btn-twitter.text::before,
+  .btn-linkedin.text::before,
+  .btn-flickr.text::before,
+  .btn-tumblr.text::before,
+  .btn-xing.text::before,
+  .btn-github.text::before,
+  .btn-html5.text::before,
+  .btn-openid.text::before,
+  .btn-stack-overflow.text::before,
+  .btn-youtube.text::before,
+  .btn-css3.text::before,
+  .btn-dribbble.text::before,
+  .btn-google-plus.text::before,
+  .btn-instagram.text::before,
+  .btn-pinterest.text::before,
+  .btn-vk.text::before,
+  .btn-yahoo.text::before,
+  .btn-behance.text::before,
+  .btn-dropbox.text::before,
+  .btn-reddit.text::before,
+  .btn-spotify.text::before,
+  .btn-vine.text::before,
+  .btn-foursquare.text::before,
+  .btn-vimeo.text::before {
     display: none; }
   .btn-facebook.text span,
   .btn-twitter.text span,
@@ -8953,31 +9056,31 @@ footer.footer {
   .btn-foursquare.text span,
   .btn-vimeo.text span {
     margin-left: 0 !important; }
-  .btn-facebook:before,
-  .btn-twitter:before,
-  .btn-linkedin:before,
-  .btn-flickr:before,
-  .btn-tumblr:before,
-  .btn-xing:before,
-  .btn-github:before,
-  .btn-html5:before,
-  .btn-openid:before,
-  .btn-stack-overflow:before,
-  .btn-youtube:before,
-  .btn-css3:before,
-  .btn-dribbble:before,
-  .btn-google-plus:before,
-  .btn-instagram:before,
-  .btn-pinterest:before,
-  .btn-vk:before,
-  .btn-yahoo:before,
-  .btn-behance:before,
-  .btn-dropbox:before,
-  .btn-reddit:before,
-  .btn-spotify:before,
-  .btn-vine:before,
-  .btn-foursquare:before,
-  .btn-vimeo:before {
+  .btn-facebook::before,
+  .btn-twitter::before,
+  .btn-linkedin::before,
+  .btn-flickr::before,
+  .btn-tumblr::before,
+  .btn-xing::before,
+  .btn-github::before,
+  .btn-html5::before,
+  .btn-openid::before,
+  .btn-stack-overflow::before,
+  .btn-youtube::before,
+  .btn-css3::before,
+  .btn-dribbble::before,
+  .btn-google-plus::before,
+  .btn-instagram::before,
+  .btn-pinterest::before,
+  .btn-vk::before,
+  .btn-yahoo::before,
+  .btn-behance::before,
+  .btn-dropbox::before,
+  .btn-reddit::before,
+  .btn-spotify::before,
+  .btn-vine::before,
+  .btn-foursquare::before,
+  .btn-vimeo::before {
     width: 2.3125rem;
     height: 2.3125rem;
     padding: 0.5rem 0;
@@ -9113,79 +9216,79 @@ footer.footer {
     font-size: 1.25rem;
     line-height: 1.33333;
     border: 0; }
-    .btn-facebook.btn-lg:before, .btn-group-lg > .btn-facebook.btn:before, .fc .btn-group-lg > button.btn-facebook:before,
-    .btn-twitter.btn-lg:before,
-    .btn-group-lg > .btn-twitter.btn:before,
-    .fc .btn-group-lg > button.btn-twitter:before,
-    .btn-linkedin.btn-lg:before,
-    .btn-group-lg > .btn-linkedin.btn:before,
-    .fc .btn-group-lg > button.btn-linkedin:before,
-    .btn-flickr.btn-lg:before,
-    .btn-group-lg > .btn-flickr.btn:before,
-    .fc .btn-group-lg > button.btn-flickr:before,
-    .btn-tumblr.btn-lg:before,
-    .btn-group-lg > .btn-tumblr.btn:before,
-    .fc .btn-group-lg > button.btn-tumblr:before,
-    .btn-xing.btn-lg:before,
-    .btn-group-lg > .btn-xing.btn:before,
-    .fc .btn-group-lg > button.btn-xing:before,
-    .btn-github.btn-lg:before,
-    .btn-group-lg > .btn-github.btn:before,
-    .fc .btn-group-lg > button.btn-github:before,
-    .btn-html5.btn-lg:before,
-    .btn-group-lg > .btn-html5.btn:before,
-    .fc .btn-group-lg > button.btn-html5:before,
-    .btn-openid.btn-lg:before,
-    .btn-group-lg > .btn-openid.btn:before,
-    .fc .btn-group-lg > button.btn-openid:before,
-    .btn-stack-overflow.btn-lg:before,
-    .btn-group-lg > .btn-stack-overflow.btn:before,
-    .fc .btn-group-lg > button.btn-stack-overflow:before,
-    .btn-youtube.btn-lg:before,
-    .btn-group-lg > .btn-youtube.btn:before,
-    .fc .btn-group-lg > button.btn-youtube:before,
-    .btn-css3.btn-lg:before,
-    .btn-group-lg > .btn-css3.btn:before,
-    .fc .btn-group-lg > button.btn-css3:before,
-    .btn-dribbble.btn-lg:before,
-    .btn-group-lg > .btn-dribbble.btn:before,
-    .fc .btn-group-lg > button.btn-dribbble:before,
-    .btn-google-plus.btn-lg:before,
-    .btn-group-lg > .btn-google-plus.btn:before,
-    .fc .btn-group-lg > button.btn-google-plus:before,
-    .btn-instagram.btn-lg:before,
-    .btn-group-lg > .btn-instagram.btn:before,
-    .fc .btn-group-lg > button.btn-instagram:before,
-    .btn-pinterest.btn-lg:before,
-    .btn-group-lg > .btn-pinterest.btn:before,
-    .fc .btn-group-lg > button.btn-pinterest:before,
-    .btn-vk.btn-lg:before,
-    .btn-group-lg > .btn-vk.btn:before,
-    .fc .btn-group-lg > button.btn-vk:before,
-    .btn-yahoo.btn-lg:before,
-    .btn-group-lg > .btn-yahoo.btn:before,
-    .fc .btn-group-lg > button.btn-yahoo:before,
-    .btn-behance.btn-lg:before,
-    .btn-group-lg > .btn-behance.btn:before,
-    .fc .btn-group-lg > button.btn-behance:before,
-    .btn-dropbox.btn-lg:before,
-    .btn-group-lg > .btn-dropbox.btn:before,
-    .fc .btn-group-lg > button.btn-dropbox:before,
-    .btn-reddit.btn-lg:before,
-    .btn-group-lg > .btn-reddit.btn:before,
-    .fc .btn-group-lg > button.btn-reddit:before,
-    .btn-spotify.btn-lg:before,
-    .btn-group-lg > .btn-spotify.btn:before,
-    .fc .btn-group-lg > button.btn-spotify:before,
-    .btn-vine.btn-lg:before,
-    .btn-group-lg > .btn-vine.btn:before,
-    .fc .btn-group-lg > button.btn-vine:before,
-    .btn-foursquare.btn-lg:before,
-    .btn-group-lg > .btn-foursquare.btn:before,
-    .fc .btn-group-lg > button.btn-foursquare:before,
-    .btn-vimeo.btn-lg:before,
-    .btn-group-lg > .btn-vimeo.btn:before,
-    .fc .btn-group-lg > button.btn-vimeo:before {
+    .btn-facebook.btn-lg::before, .btn-group-lg > .btn-facebook.btn::before, .fc .btn-group-lg > button.btn-facebook::before,
+    .btn-twitter.btn-lg::before,
+    .btn-group-lg > .btn-twitter.btn::before,
+    .fc .btn-group-lg > button.btn-twitter::before,
+    .btn-linkedin.btn-lg::before,
+    .btn-group-lg > .btn-linkedin.btn::before,
+    .fc .btn-group-lg > button.btn-linkedin::before,
+    .btn-flickr.btn-lg::before,
+    .btn-group-lg > .btn-flickr.btn::before,
+    .fc .btn-group-lg > button.btn-flickr::before,
+    .btn-tumblr.btn-lg::before,
+    .btn-group-lg > .btn-tumblr.btn::before,
+    .fc .btn-group-lg > button.btn-tumblr::before,
+    .btn-xing.btn-lg::before,
+    .btn-group-lg > .btn-xing.btn::before,
+    .fc .btn-group-lg > button.btn-xing::before,
+    .btn-github.btn-lg::before,
+    .btn-group-lg > .btn-github.btn::before,
+    .fc .btn-group-lg > button.btn-github::before,
+    .btn-html5.btn-lg::before,
+    .btn-group-lg > .btn-html5.btn::before,
+    .fc .btn-group-lg > button.btn-html5::before,
+    .btn-openid.btn-lg::before,
+    .btn-group-lg > .btn-openid.btn::before,
+    .fc .btn-group-lg > button.btn-openid::before,
+    .btn-stack-overflow.btn-lg::before,
+    .btn-group-lg > .btn-stack-overflow.btn::before,
+    .fc .btn-group-lg > button.btn-stack-overflow::before,
+    .btn-youtube.btn-lg::before,
+    .btn-group-lg > .btn-youtube.btn::before,
+    .fc .btn-group-lg > button.btn-youtube::before,
+    .btn-css3.btn-lg::before,
+    .btn-group-lg > .btn-css3.btn::before,
+    .fc .btn-group-lg > button.btn-css3::before,
+    .btn-dribbble.btn-lg::before,
+    .btn-group-lg > .btn-dribbble.btn::before,
+    .fc .btn-group-lg > button.btn-dribbble::before,
+    .btn-google-plus.btn-lg::before,
+    .btn-group-lg > .btn-google-plus.btn::before,
+    .fc .btn-group-lg > button.btn-google-plus::before,
+    .btn-instagram.btn-lg::before,
+    .btn-group-lg > .btn-instagram.btn::before,
+    .fc .btn-group-lg > button.btn-instagram::before,
+    .btn-pinterest.btn-lg::before,
+    .btn-group-lg > .btn-pinterest.btn::before,
+    .fc .btn-group-lg > button.btn-pinterest::before,
+    .btn-vk.btn-lg::before,
+    .btn-group-lg > .btn-vk.btn::before,
+    .fc .btn-group-lg > button.btn-vk::before,
+    .btn-yahoo.btn-lg::before,
+    .btn-group-lg > .btn-yahoo.btn::before,
+    .fc .btn-group-lg > button.btn-yahoo::before,
+    .btn-behance.btn-lg::before,
+    .btn-group-lg > .btn-behance.btn::before,
+    .fc .btn-group-lg > button.btn-behance::before,
+    .btn-dropbox.btn-lg::before,
+    .btn-group-lg > .btn-dropbox.btn::before,
+    .fc .btn-group-lg > button.btn-dropbox::before,
+    .btn-reddit.btn-lg::before,
+    .btn-group-lg > .btn-reddit.btn::before,
+    .fc .btn-group-lg > button.btn-reddit::before,
+    .btn-spotify.btn-lg::before,
+    .btn-group-lg > .btn-spotify.btn::before,
+    .fc .btn-group-lg > button.btn-spotify::before,
+    .btn-vine.btn-lg::before,
+    .btn-group-lg > .btn-vine.btn::before,
+    .fc .btn-group-lg > button.btn-vine::before,
+    .btn-foursquare.btn-lg::before,
+    .btn-group-lg > .btn-foursquare.btn::before,
+    .fc .btn-group-lg > button.btn-foursquare::before,
+    .btn-vimeo.btn-lg::before,
+    .btn-group-lg > .btn-vimeo.btn::before,
+    .fc .btn-group-lg > button.btn-vimeo::before {
       width: 3.16667rem;
       height: 3.16667rem;
       padding: 0.75rem 0;
@@ -9369,79 +9472,79 @@ footer.footer {
     font-size: 0.875rem;
     line-height: 1.5;
     border: 0; }
-    .btn-facebook.btn-sm:before, .btn-group-sm > .btn-facebook.btn:before, .fc .btn-group-sm > button.btn-facebook:before,
-    .btn-twitter.btn-sm:before,
-    .btn-group-sm > .btn-twitter.btn:before,
-    .fc .btn-group-sm > button.btn-twitter:before,
-    .btn-linkedin.btn-sm:before,
-    .btn-group-sm > .btn-linkedin.btn:before,
-    .fc .btn-group-sm > button.btn-linkedin:before,
-    .btn-flickr.btn-sm:before,
-    .btn-group-sm > .btn-flickr.btn:before,
-    .fc .btn-group-sm > button.btn-flickr:before,
-    .btn-tumblr.btn-sm:before,
-    .btn-group-sm > .btn-tumblr.btn:before,
-    .fc .btn-group-sm > button.btn-tumblr:before,
-    .btn-xing.btn-sm:before,
-    .btn-group-sm > .btn-xing.btn:before,
-    .fc .btn-group-sm > button.btn-xing:before,
-    .btn-github.btn-sm:before,
-    .btn-group-sm > .btn-github.btn:before,
-    .fc .btn-group-sm > button.btn-github:before,
-    .btn-html5.btn-sm:before,
-    .btn-group-sm > .btn-html5.btn:before,
-    .fc .btn-group-sm > button.btn-html5:before,
-    .btn-openid.btn-sm:before,
-    .btn-group-sm > .btn-openid.btn:before,
-    .fc .btn-group-sm > button.btn-openid:before,
-    .btn-stack-overflow.btn-sm:before,
-    .btn-group-sm > .btn-stack-overflow.btn:before,
-    .fc .btn-group-sm > button.btn-stack-overflow:before,
-    .btn-youtube.btn-sm:before,
-    .btn-group-sm > .btn-youtube.btn:before,
-    .fc .btn-group-sm > button.btn-youtube:before,
-    .btn-css3.btn-sm:before,
-    .btn-group-sm > .btn-css3.btn:before,
-    .fc .btn-group-sm > button.btn-css3:before,
-    .btn-dribbble.btn-sm:before,
-    .btn-group-sm > .btn-dribbble.btn:before,
-    .fc .btn-group-sm > button.btn-dribbble:before,
-    .btn-google-plus.btn-sm:before,
-    .btn-group-sm > .btn-google-plus.btn:before,
-    .fc .btn-group-sm > button.btn-google-plus:before,
-    .btn-instagram.btn-sm:before,
-    .btn-group-sm > .btn-instagram.btn:before,
-    .fc .btn-group-sm > button.btn-instagram:before,
-    .btn-pinterest.btn-sm:before,
-    .btn-group-sm > .btn-pinterest.btn:before,
-    .fc .btn-group-sm > button.btn-pinterest:before,
-    .btn-vk.btn-sm:before,
-    .btn-group-sm > .btn-vk.btn:before,
-    .fc .btn-group-sm > button.btn-vk:before,
-    .btn-yahoo.btn-sm:before,
-    .btn-group-sm > .btn-yahoo.btn:before,
-    .fc .btn-group-sm > button.btn-yahoo:before,
-    .btn-behance.btn-sm:before,
-    .btn-group-sm > .btn-behance.btn:before,
-    .fc .btn-group-sm > button.btn-behance:before,
-    .btn-dropbox.btn-sm:before,
-    .btn-group-sm > .btn-dropbox.btn:before,
-    .fc .btn-group-sm > button.btn-dropbox:before,
-    .btn-reddit.btn-sm:before,
-    .btn-group-sm > .btn-reddit.btn:before,
-    .fc .btn-group-sm > button.btn-reddit:before,
-    .btn-spotify.btn-sm:before,
-    .btn-group-sm > .btn-spotify.btn:before,
-    .fc .btn-group-sm > button.btn-spotify:before,
-    .btn-vine.btn-sm:before,
-    .btn-group-sm > .btn-vine.btn:before,
-    .fc .btn-group-sm > button.btn-vine:before,
-    .btn-foursquare.btn-sm:before,
-    .btn-group-sm > .btn-foursquare.btn:before,
-    .fc .btn-group-sm > button.btn-foursquare:before,
-    .btn-vimeo.btn-sm:before,
-    .btn-group-sm > .btn-vimeo.btn:before,
-    .fc .btn-group-sm > button.btn-vimeo:before {
+    .btn-facebook.btn-sm::before, .btn-group-sm > .btn-facebook.btn::before, .fc .btn-group-sm > button.btn-facebook::before,
+    .btn-twitter.btn-sm::before,
+    .btn-group-sm > .btn-twitter.btn::before,
+    .fc .btn-group-sm > button.btn-twitter::before,
+    .btn-linkedin.btn-sm::before,
+    .btn-group-sm > .btn-linkedin.btn::before,
+    .fc .btn-group-sm > button.btn-linkedin::before,
+    .btn-flickr.btn-sm::before,
+    .btn-group-sm > .btn-flickr.btn::before,
+    .fc .btn-group-sm > button.btn-flickr::before,
+    .btn-tumblr.btn-sm::before,
+    .btn-group-sm > .btn-tumblr.btn::before,
+    .fc .btn-group-sm > button.btn-tumblr::before,
+    .btn-xing.btn-sm::before,
+    .btn-group-sm > .btn-xing.btn::before,
+    .fc .btn-group-sm > button.btn-xing::before,
+    .btn-github.btn-sm::before,
+    .btn-group-sm > .btn-github.btn::before,
+    .fc .btn-group-sm > button.btn-github::before,
+    .btn-html5.btn-sm::before,
+    .btn-group-sm > .btn-html5.btn::before,
+    .fc .btn-group-sm > button.btn-html5::before,
+    .btn-openid.btn-sm::before,
+    .btn-group-sm > .btn-openid.btn::before,
+    .fc .btn-group-sm > button.btn-openid::before,
+    .btn-stack-overflow.btn-sm::before,
+    .btn-group-sm > .btn-stack-overflow.btn::before,
+    .fc .btn-group-sm > button.btn-stack-overflow::before,
+    .btn-youtube.btn-sm::before,
+    .btn-group-sm > .btn-youtube.btn::before,
+    .fc .btn-group-sm > button.btn-youtube::before,
+    .btn-css3.btn-sm::before,
+    .btn-group-sm > .btn-css3.btn::before,
+    .fc .btn-group-sm > button.btn-css3::before,
+    .btn-dribbble.btn-sm::before,
+    .btn-group-sm > .btn-dribbble.btn::before,
+    .fc .btn-group-sm > button.btn-dribbble::before,
+    .btn-google-plus.btn-sm::before,
+    .btn-group-sm > .btn-google-plus.btn::before,
+    .fc .btn-group-sm > button.btn-google-plus::before,
+    .btn-instagram.btn-sm::before,
+    .btn-group-sm > .btn-instagram.btn::before,
+    .fc .btn-group-sm > button.btn-instagram::before,
+    .btn-pinterest.btn-sm::before,
+    .btn-group-sm > .btn-pinterest.btn::before,
+    .fc .btn-group-sm > button.btn-pinterest::before,
+    .btn-vk.btn-sm::before,
+    .btn-group-sm > .btn-vk.btn::before,
+    .fc .btn-group-sm > button.btn-vk::before,
+    .btn-yahoo.btn-sm::before,
+    .btn-group-sm > .btn-yahoo.btn::before,
+    .fc .btn-group-sm > button.btn-yahoo::before,
+    .btn-behance.btn-sm::before,
+    .btn-group-sm > .btn-behance.btn::before,
+    .fc .btn-group-sm > button.btn-behance::before,
+    .btn-dropbox.btn-sm::before,
+    .btn-group-sm > .btn-dropbox.btn::before,
+    .fc .btn-group-sm > button.btn-dropbox::before,
+    .btn-reddit.btn-sm::before,
+    .btn-group-sm > .btn-reddit.btn::before,
+    .fc .btn-group-sm > button.btn-reddit::before,
+    .btn-spotify.btn-sm::before,
+    .btn-group-sm > .btn-spotify.btn::before,
+    .fc .btn-group-sm > button.btn-spotify::before,
+    .btn-vine.btn-sm::before,
+    .btn-group-sm > .btn-vine.btn::before,
+    .fc .btn-group-sm > button.btn-vine::before,
+    .btn-foursquare.btn-sm::before,
+    .btn-group-sm > .btn-foursquare.btn::before,
+    .fc .btn-group-sm > button.btn-foursquare::before,
+    .btn-vimeo.btn-sm::before,
+    .btn-group-sm > .btn-vimeo.btn::before,
+    .fc .btn-group-sm > button.btn-vimeo::before {
       width: 1.8125rem;
       height: 1.8125rem;
       padding: 0.25rem 0;
@@ -9551,252 +9654,252 @@ footer.footer {
 
 .btn-facebook {
   background: #3b5998; }
-  .btn-facebook:before {
+  .btn-facebook::before {
     content: "\f09a";
     background: #344e86; }
   .btn-facebook:hover {
     background: #344e86; }
-    .btn-facebook:hover:before {
+    .btn-facebook:hover::before {
       background: #2d4373; }
 
 .btn-twitter {
   background: #00aced; }
-  .btn-twitter:before {
+  .btn-twitter::before {
     content: "\f099";
     background: #0099d4; }
   .btn-twitter:hover {
     background: #0099d4; }
-    .btn-twitter:hover:before {
+    .btn-twitter:hover::before {
       background: #0087ba; }
 
 .btn-linkedin {
   background: #4875b4; }
-  .btn-linkedin:before {
+  .btn-linkedin::before {
     content: "\f0e1";
     background: #4169a2; }
   .btn-linkedin:hover {
     background: #4169a2; }
-    .btn-linkedin:hover:before {
+    .btn-linkedin:hover::before {
       background: #395d90; }
 
 .btn-flickr {
   background: #ff0084; }
-  .btn-flickr:before {
+  .btn-flickr::before {
     content: "\f16e";
     background: #e60077; }
   .btn-flickr:hover {
     background: #e60077; }
-    .btn-flickr:hover:before {
+    .btn-flickr:hover::before {
       background: #cc006a; }
 
 .btn-tumblr {
   background: #32506d; }
-  .btn-tumblr:before {
+  .btn-tumblr::before {
     content: "\f173";
     background: #2a435c; }
   .btn-tumblr:hover {
     background: #2a435c; }
-    .btn-tumblr:hover:before {
+    .btn-tumblr:hover::before {
       background: #22364a; }
 
 .btn-xing {
   background: #026466; }
-  .btn-xing:before {
+  .btn-xing::before {
     content: "\f168";
     background: #024b4d; }
   .btn-xing:hover {
     background: #024b4d; }
-    .btn-xing:hover:before {
+    .btn-xing:hover::before {
       background: #013334; }
 
 .btn-github {
   background: #4183c4; }
-  .btn-github:before {
+  .btn-github::before {
     content: "\f09b";
     background: #3876b4; }
   .btn-github:hover {
     background: #3876b4; }
-    .btn-github:hover:before {
+    .btn-github:hover::before {
       background: #3269a0; }
 
 .btn-html5 {
   background: #e34f26; }
-  .btn-html5:before {
+  .btn-html5::before {
     content: "\f13b";
     background: #d4431b; }
   .btn-html5:hover {
     background: #d4431b; }
-    .btn-html5:hover:before {
+    .btn-html5:hover::before {
       background: #be3c18; }
 
 .btn-openid {
   background: #f78c40; }
-  .btn-openid:before {
+  .btn-openid::before {
     content: "\f19b";
     background: #f67d28; }
   .btn-openid:hover {
     background: #f67d28; }
-    .btn-openid:hover:before {
+    .btn-openid:hover::before {
       background: #f56f0f; }
 
 .btn-stack-overflow {
   background: #fe7a15; }
-  .btn-stack-overflow:before {
+  .btn-stack-overflow::before {
     content: "\f16c";
     background: #f86c01; }
   .btn-stack-overflow:hover {
     background: #f86c01; }
-    .btn-stack-overflow:hover:before {
+    .btn-stack-overflow:hover::before {
       background: #df6101; }
 
 .btn-css3 {
   background: #0170ba; }
-  .btn-css3:before {
+  .btn-css3::before {
     content: "\f13c";
     background: #0161a1; }
   .btn-css3:hover {
     background: #0161a1; }
-    .btn-css3:hover:before {
+    .btn-css3:hover::before {
       background: #015187; }
 
 .btn-youtube {
   background: #b00; }
-  .btn-youtube:before {
+  .btn-youtube::before {
     content: "\f167";
     background: #a20000; }
   .btn-youtube:hover {
     background: #a20000; }
-    .btn-youtube:hover:before {
+    .btn-youtube:hover::before {
       background: #880000; }
 
 .btn-dribbble {
   background: #ea4c89; }
-  .btn-dribbble:before {
+  .btn-dribbble::before {
     content: "\f17d";
     background: #e7357a; }
   .btn-dribbble:hover {
     background: #e7357a; }
-    .btn-dribbble:hover:before {
+    .btn-dribbble:hover::before {
       background: #e51e6b; }
 
 .btn-google-plus {
   background: #bb4b39; }
-  .btn-google-plus:before {
+  .btn-google-plus::before {
     content: "\f0d5";
     background: #a74333; }
   .btn-google-plus:hover {
     background: #a74333; }
-    .btn-google-plus:hover:before {
+    .btn-google-plus:hover::before {
       background: #943b2d; }
 
 .btn-instagram {
   background: #517fa4; }
-  .btn-instagram:before {
+  .btn-instagram::before {
     content: "\f16d";
     background: #497293; }
   .btn-instagram:hover {
     background: #497293; }
-    .btn-instagram:hover:before {
+    .btn-instagram:hover::before {
       background: #406582; }
 
 .btn-pinterest {
   background: #cb2027; }
-  .btn-pinterest:before {
+  .btn-pinterest::before {
     content: "\f0d2";
     background: #b51d23; }
   .btn-pinterest:hover {
     background: #b51d23; }
-    .btn-pinterest:hover:before {
+    .btn-pinterest:hover::before {
       background: #9f191f; }
 
 .btn-vk {
   background: #45668e; }
-  .btn-vk:before {
+  .btn-vk::before {
     content: "\f189";
     background: #3d5a7d; }
   .btn-vk:hover {
     background: #3d5a7d; }
-    .btn-vk:hover:before {
+    .btn-vk:hover::before {
       background: #344d6c; }
 
 .btn-yahoo {
   background: #400191; }
-  .btn-yahoo:before {
+  .btn-yahoo::before {
     content: "\f19e";
     background: #350178; }
   .btn-yahoo:hover {
     background: #350178; }
-    .btn-yahoo:hover:before {
+    .btn-yahoo:hover::before {
       background: #2a015e; }
 
 .btn-behance {
   background: #1769ff; }
-  .btn-behance:before {
+  .btn-behance::before {
     content: "\f1b4";
     background: #0059fd; }
   .btn-behance:hover {
     background: #0059fd; }
-    .btn-behance:hover:before {
+    .btn-behance:hover::before {
       background: #0050e3; }
 
 .btn-dropbox {
   background: #007ee5; }
-  .btn-dropbox:before {
+  .btn-dropbox::before {
     content: "\f16b";
     background: #0070cc; }
   .btn-dropbox:hover {
     background: #0070cc; }
-    .btn-dropbox:hover:before {
+    .btn-dropbox:hover::before {
       background: #0062b2; }
 
 .btn-reddit {
   background: #ff4500; }
-  .btn-reddit:before {
+  .btn-reddit::before {
     content: "\f1a1";
     background: #e63e00; }
   .btn-reddit:hover {
     background: #e63e00; }
-    .btn-reddit:hover:before {
+    .btn-reddit:hover::before {
       background: #cc3700; }
 
 .btn-spotify {
   background: #7ab800; }
-  .btn-spotify:before {
+  .btn-spotify::before {
     content: "\f1bc";
     background: #699f00; }
   .btn-spotify:hover {
     background: #699f00; }
-    .btn-spotify:hover:before {
+    .btn-spotify:hover::before {
       background: #588500; }
 
 .btn-vine {
   background: #00bf8f; }
-  .btn-vine:before {
+  .btn-vine::before {
     content: "\f1ca";
     background: #00a67c; }
   .btn-vine:hover {
     background: #00a67c; }
-    .btn-vine:hover:before {
+    .btn-vine:hover::before {
       background: #008c69; }
 
 .btn-foursquare {
   background: #1073af; }
-  .btn-foursquare:before {
+  .btn-foursquare::before {
     content: "\f180";
     background: #0e6498; }
   .btn-foursquare:hover {
     background: #0e6498; }
-    .btn-foursquare:hover:before {
+    .btn-foursquare:hover::before {
       background: #0c5480; }
 
 .btn-vimeo {
   background: #aad450; }
-  .btn-vimeo:before {
+  .btn-vimeo::before {
     content: "\f194";
     background: #a0cf3c; }
   .btn-vimeo:hover {
     background: #a0cf3c; }
-    .btn-vimeo:hover:before {
+    .btn-vimeo:hover::before {
       background: #93c130; }
 
 hr.transparent {
@@ -10601,6 +10704,163 @@ base-chart.chart {
         margin-left: 0; }
     body.mobile-open .main {
       margin-left: 200px !important; } }
+
+.emailApp {
+  position: relative;
+  background: #fff;
+  border: 1px solid #d1d4d7; }
+  .emailApp nav {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid #d1d4d7;
+    padding: 15px; }
+    .emailApp nav .btn-block {
+      margin-bottom: 15px; }
+    .emailApp nav ul.nav li.nav-item {
+      margin: 0;
+      position: relative; }
+      .emailApp nav ul.nav li.nav-item a.nav-link {
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 0 10px; }
+        .emailApp nav ul.nav li.nav-item a.nav-link i {
+          width: 20px;
+          text-align: center;
+          margin: 0 10px 0 0;
+          font-size: 14px; }
+        .emailApp nav ul.nav li.nav-item a.nav-link .tag {
+          float: right;
+          margin-top: 16px;
+          margin-left: 10px; }
+      .emailApp nav ul.nav li.nav-item a.nav-link {
+        line-height: 40px;
+        color: #2a2c36;
+        border-bottom: 1px solid #d1d4d7; }
+  .emailApp main {
+    padding: 15px 15px 15px 255px; }
+    .emailApp main .toolbar {
+      margin: -15px -15px 15px -15px;
+      padding: 15px;
+      border-bottom: 1px solid #d1d4d7; }
+    .emailApp main ul.messages-list {
+      list-style: none;
+      margin: 15px -15px 0 -15px;
+      padding: 15px 15px 0 15px; }
+      .emailApp main ul.messages-list li {
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 10px; }
+        .emailApp main ul.messages-list li a {
+          color: black; }
+          .emailApp main ul.messages-list li a:hover {
+            text-decoration: none; }
+        .emailApp main ul.messages-list li.unread .header, .emailApp main ul.messages-list li.unread .title {
+          font-weight: bold; }
+        .emailApp main ul.messages-list li:hover {
+          border: 1px solid #d1d4d7;
+          padding: 9px; }
+          .emailApp main ul.messages-list li:hover .action {
+            color: #d1d4d7; }
+        .emailApp main ul.messages-list li .header {
+          margin: 0 0 5px 0; }
+          .emailApp main ul.messages-list li .header .from {
+            width: 49.9%;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis; }
+          .emailApp main ul.messages-list li .header .date {
+            width: 50%;
+            text-align: right;
+            float: right; }
+        .emailApp main ul.messages-list li .title {
+          margin: 0 0 5px 0;
+          white-space: nowrap;
+          overflow: hidden !important;
+          text-overflow: ellipsis; }
+        .emailApp main ul.messages-list li .description {
+          font-size: 12px;
+          padding-left: 29px; }
+        .emailApp main ul.messages-list li .action {
+          display: inline-block;
+          width: 16px;
+          text-align: center;
+          margin-right: 10px;
+          color: #d1d4d7; }
+          .emailApp main ul.messages-list li .action .fa-check-square-o {
+            margin: 0 -1px 0 1px; }
+          .emailApp main ul.messages-list li .action .fa-square {
+            float: left;
+            margin-top: -16px;
+            margin-left: 4px;
+            font-size: 11px;
+            color: white; }
+          .emailApp main ul.messages-list li .action .fa-star.bg {
+            float: left;
+            margin-top: -16px;
+            margin-left: 3px;
+            font-size: 12px;
+            color: white; }
+    .emailApp main .message .message-title {
+      margin-top: 30px;
+      padding-top: 10px;
+      font-weight: bold;
+      font-size: 14px; }
+    .emailApp main .message .header {
+      margin: 20px 0 30px 0;
+      padding: 10px 0 10px 0;
+      border-top: 1px solid #d1d4d7;
+      border-bottom: 1px solid #d1d4d7; }
+      .emailApp main .message .header .avatar {
+        height: 34px;
+        width: 34px;
+        float: left;
+        margin-right: 10px; }
+      .emailApp main .message .header i {
+        margin-top: 1px; }
+      .emailApp main .message .header .from {
+        display: inline-block;
+        width: 50%;
+        font-size: 12px;
+        margin-top: -2px;
+        color: #d1d4d7; }
+        .emailApp main .message .header .from span {
+          display: block;
+          font-size: 14px;
+          font-weight: bold; }
+      .emailApp main .message .header .date {
+        display: inline-block;
+        width: 29%;
+        text-align: right;
+        float: right;
+        font-size: 12px;
+        margin-top: 18px; }
+    .emailApp main .message .attachments {
+      border-top: 3px solid #f8f9fa;
+      border-bottom: 3px solid #f8f9fa;
+      padding: 10px 0px;
+      margin-bottom: 20px;
+      font-size: 12px; }
+      .emailApp main .message .attachments ul {
+        list-style: none;
+        margin: 0 0 0 -40px; }
+        .emailApp main .message .attachments ul li {
+          margin: 10px 0; }
+          .emailApp main .message .attachments ul li .tag {
+            padding: 2px 4px; }
+          .emailApp main .message .attachments ul li span.quickMenu {
+            float: right;
+            text-align: right; }
+            .emailApp main .message .attachments ul li span.quickMenu .fa {
+              padding: 5px 0 5px 25px;
+              font-size: 14px;
+              margin: -2px 0px 0px 5px;
+              color: #d1d4d7; }
 
 .page-header {
   padding: 1rem 0;

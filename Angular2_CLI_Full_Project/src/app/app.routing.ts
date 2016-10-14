@@ -17,6 +17,9 @@ import { TablesComponent }              from './components/tables.component';
 
 //Icons
 import { FontAwesomeComponent }         from './icons/font-awesome.component';
+import { GlyphiconsComponent }          from './icons/glyphicons.component';
+import { GlyphiconsFiletypesComponent } from './icons/glyphicons-filetypes.component';
+import { GlyphiconsSocialComponent }    from './icons/glyphicons-social.component';
 import { SimpleLineIconsComponent }     from './icons/simple-line-icons.component';
 
 //Plugins
@@ -140,6 +143,27 @@ const appRoutes: Routes = [
                         component: FontAwesomeComponent,
                         data: {
                             title: 'Font Awesome'
+                        }
+                    },
+                    {
+                        path: 'glyphicons',
+                        component: GlyphiconsComponent,
+                        data: {
+                            title: 'Glyphicons'
+                        }
+                    },
+                    {
+                        path: 'glyphicons-filetypes',
+                        component: GlyphiconsFiletypesComponent,
+                        data: {
+                            title: 'Glyphicons Filetypes'
+                        }
+                    },
+                    {
+                        path: 'glyphicons-social',
+                        component: GlyphiconsSocialComponent,
+                        data: {
+                            title: 'Glyphicons Social'
                         }
                     },
                     {

@@ -1,6 +1,8 @@
 import { NgModule }                     from '@angular/core';
 import { BrowserModule }                from '@angular/platform-browser';
-
+import { LocationStrategy,
+         HashLocationStrategy }         from '@angular/common';
+    
 import { AppComponent }                 from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
@@ -29,6 +31,9 @@ import { TablesComponent }              from './components/tables.component';
 
 //Icons
 import { FontAwesomeComponent }         from './icons/font-awesome.component';
+import { GlyphiconsComponent }          from './icons/glyphicons.component';
+import { GlyphiconsFiletypesComponent } from './icons/glyphicons-filetypes.component';
+import { GlyphiconsSocialComponent }    from './icons/glyphicons-social.component';
 import { SimpleLineIconsComponent }     from './icons/simple-line-icons.component';
 
 //Plugins
@@ -47,38 +52,45 @@ import { LoginComponent }               from './pages/login.component';
 import { RegisterComponent }            from './pages/register.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    routing,
-    Ng2BootstrapModule,
-    ChartsModule,
-    ToastModule
-  ],
-  declarations: [
-    AppComponent,
-    FullLayoutComponent,
-    SimpleLayoutComponent,
-    DashboardComponent,
-    ButtonsComponent,
-    CardsComponent,
-    FormsComponent,
-    SocialButtonsComponent,
-    SwitchesComponent,
-    TablesComponent,
-    FontAwesomeComponent,
-    SimpleLineIconsComponent,
-    NotificationsComponent,
-    WidgetsComponent,
-    ChartsComponent,
-    p404Component,
-    p500Component,
-    LoginComponent,
-    RegisterComponent,
-    NAV_DROPDOWN_DIRECTIVES,
-    BreadcrumbsComponent,
-    SIDEBAR_TOGGLE_DIRECTIVES,
-    AsideToggleDirective
-  ],
-  bootstrap: [ AppComponent ]
+    imports: [
+        BrowserModule,
+        routing,
+        Ng2BootstrapModule,
+        ChartsModule,
+        ToastModule
+    ],
+    declarations: [
+        AppComponent,
+        FullLayoutComponent,
+        SimpleLayoutComponent,
+        DashboardComponent,
+        ButtonsComponent,
+        CardsComponent,
+        FormsComponent,
+        SocialButtonsComponent,
+        SwitchesComponent,
+        TablesComponent,
+        FontAwesomeComponent,
+        GlyphiconsComponent,
+        GlyphiconsFiletypesComponent,
+        GlyphiconsSocialComponent,
+        SimpleLineIconsComponent,
+        NotificationsComponent,
+        WidgetsComponent,
+        ChartsComponent,
+        p404Component,
+        p500Component,
+        LoginComponent,
+        RegisterComponent,
+        NAV_DROPDOWN_DIRECTIVES,
+        BreadcrumbsComponent,
+        SIDEBAR_TOGGLE_DIRECTIVES,
+        AsideToggleDirective
+    ],
+    providers: [{
+        provide: LocationStrategy,
+        useClass: HashLocationStrategy
+    }],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }

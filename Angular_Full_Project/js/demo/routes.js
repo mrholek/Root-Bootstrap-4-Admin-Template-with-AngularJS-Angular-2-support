@@ -24,6 +24,57 @@ angular
                     label: 'Simple Line Icons'
                 }
             })
+            .state('app.icons.glyphicons', {
+                url: '/glyphicons',
+                templateUrl: 'views/icons/glyphicons.html',
+                ncyBreadcrumb: {
+                    label: 'Glyphicons'
+                },
+                resolve: {
+                    loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+                        // you can lazy load CSS files
+                        return $ocLazyLoad.load([{
+                            serie: true,
+                            name: 'Glyphicons',
+                            files: ['css/glyphicons.css']
+                        }]);
+                    }]
+                }
+            })
+            .state('app.icons.glyphicons-filetypes', {
+                url: '/glyphicons',
+                templateUrl: 'views/icons/glyphicons-filetypes.html',
+                ncyBreadcrumb: {
+                    label: 'Glyphicons Filetypes'
+                },
+                resolve: {
+                    loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+                        // you can lazy load CSS files
+                        return $ocLazyLoad.load([{
+                            serie: true,
+                            name: 'Glyphicons Filetypes',
+                            files: ['css/glyphicons-filetypes.css']
+                        }]);
+                    }]
+                }
+            })
+            .state('app.icons.glyphicons-social', {
+                url: '/glyphicons',
+                templateUrl: 'views/icons/glyphicons-social.html',
+                ncyBreadcrumb: {
+                    label: 'Glyphicons Social'
+                },
+                resolve: {
+                    loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+                        // you can lazy load CSS files
+                        return $ocLazyLoad.load([{
+                            serie: true,
+                            name: 'Glyphicons Social',
+                            files: ['css/glyphicons-social.css']
+                        }]);
+                    }]
+                }
+            })
             .state('app.components', {
                 url: "/components",
                 abstract: true,

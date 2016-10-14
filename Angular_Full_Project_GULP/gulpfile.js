@@ -31,6 +31,19 @@ gulp.task('serve', ['sass'], function() {
 
 });
 
+// Static Server without watching scss files
+gulp.task('serve:lite', function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch('**/*.css').on('change', browserSync.reload);
+    gulp.watch('**/*.html').on('change', browserSync.reload);
+    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+
+});
+
 gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass())
@@ -84,11 +97,6 @@ gulp.task('copy:html', function() {
    .pipe(gulp.dest(paths.dist+'/'));
 });
 
-gulp.task('copy:others', function() {
-   return gulp.src('data.json')
-   .pipe(gulp.dest(paths.dist+'/'));
-});
-
 gulp.task('replace:bower', function(){
     return gulp.src([
         './dist/**/*.html',
@@ -99,7 +107,7 @@ gulp.task('replace:bower', function(){
 });
 
 gulp.task('build:dist', function(callback) {
-    runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:views', 'copy:html', 'copy:others', 'replace:bower', callback);
+    runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:views', 'copy:html', 'replace:bower', callback);
 });
 
 gulp.task('default', ['serve']);

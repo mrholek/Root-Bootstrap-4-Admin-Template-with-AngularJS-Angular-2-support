@@ -1,7 +1,5 @@
 .card {
-
-    margin-bottom: 20px;
-
+    margin-bottom: 1.5 * $spacer-y;
 }
 
 .card-header {
@@ -28,7 +26,7 @@
         li.nav-item {
             border-top: 0;
             a.nav-link {
-                padding: $card-spacer-y $card-spacer-x/2;
+                padding: $card-spacer-y $card-spacer-x / 2;
                 color: $text-muted;
                 border-top: 0;
 
@@ -134,10 +132,43 @@
     }
 }
 
+[class*="card-outline-"] {
+    .card-block {
+        background: #fff !important;
+    }
+
+    &.card-outline-top {
+        border-top-width: 2px;
+        border-right-color: $border-color;
+        border-bottom-color: $border-color;
+        border-left-color: $border-color;
+    }
+}
+
+// Cards with color accent
+.card-accent-primary {
+    @include card-accent-variant($btn-primary-bg);
+}
+.card-accent-secondary {
+    @include card-accent-variant($btn-secondary-border);
+}
+.card-accent-info {
+    @include card-accent-variant($btn-info-bg);
+}
+.card-accent-success {
+    @include card-accent-variant($btn-success-bg);
+}
+.card-accent-warning {
+    @include card-accent-variant($btn-warning-bg);
+}
+.card-accent-danger {
+    @include card-accent-variant($btn-danger-bg);
+}
+
 // Card Actions
 .card-header {
     > i {
-        margin-right: $spacer-x/2;
+        margin-right: $spacer-x / 2;
     }
     .card-actions {
         position: absolute;
@@ -195,8 +226,8 @@
 
 .card-full {
     margin-top: - $spacer-y;
-    margin-right: - $grid-gutter-width / 2;
-    margin-left: - $grid-gutter-width / 2;
+    margin-right: - $grid-gutter-width-base / 2;
+    margin-left: - $grid-gutter-width-base / 2;
     border: 0;
     border-bottom: $card-border-width solid $border-color;
 }
@@ -221,4 +252,8 @@
             column-count: 2;
         }
     }
+}
+
+.card-group {
+    margin-bottom: 1.5 * $spacer-y;
 }

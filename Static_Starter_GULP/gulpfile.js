@@ -31,6 +31,19 @@ gulp.task('serve', ['sass'], function() {
 
 });
 
+// Static Server without watching scss files
+gulp.task('serve:lite', function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch('**/*.css').on('change', browserSync.reload);
+    gulp.watch('**/*.html').on('change', browserSync.reload);
+    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+
+});
+
 gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass())
