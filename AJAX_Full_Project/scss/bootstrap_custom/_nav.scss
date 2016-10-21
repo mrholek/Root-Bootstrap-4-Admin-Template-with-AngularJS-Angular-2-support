@@ -1,0 +1,21 @@
+.nav-tabs {
+    .nav-link {
+        color: $gray;
+        &.active {
+            border-color: $border-color;
+            border-bottom-color: #fff;
+            background: #fff;
+            color: $gray-dark;
+        }
+    }
+}
+
+.tab-content {
+    border: 1px solid $border-color;
+    background: #fff;
+    margin-top: -1px;
+
+    .tab-pane {
+        padding: $spacer-y $spacer-x;
+    }
+}

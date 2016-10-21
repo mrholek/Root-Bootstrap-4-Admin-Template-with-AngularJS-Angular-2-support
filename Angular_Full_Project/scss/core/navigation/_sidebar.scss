@@ -64,7 +64,7 @@ body:not(.top-nav) {
 
             // &::-webkit-scrollbar-corner {    }
 
-            //&::-webkit-resizer {    }
+            // &::-webkit-resizer {    }
         }
 
         ul.nav {
@@ -85,11 +85,15 @@ body:not(.top-nav) {
             li.nav-item {
                 position: relative;
                 margin: 0;
+                transition: background .3s ease-in-out;
 
                 ul {
-                    display: none;
+                    // display: none;
+                    max-height: 0;
                     padding: 0;
                     margin: 0;
+                    overflow-y: hidden;
+                    transition: max-height .3s ease-in-out;
 
                     li {
                         padding: 0;
@@ -150,7 +154,7 @@ body:not(.top-nav) {
 
                     &.nav-dropdown-toggle {
 
-                        &:before {
+                        &::before {
                             position: absolute;
                             top: ($sidebar-nav-link-padding-y + ($font-size-base / 4));
                             right: $sidebar-nav-link-padding-x;
@@ -159,7 +163,7 @@ body:not(.top-nav) {
                             height: ($font-size-base);
                             padding: 0;
                             font-size: $font-size-base;
-                            line-height: ($font-size-base * 3/4);
+                            line-height: ($font-size-base * 3 / 4);
                             text-align: center;
                             content: "\2039";
                             transition: .3s;
@@ -175,7 +179,8 @@ body:not(.top-nav) {
                             border-radius: $border-radius;
                         }
                         > ul, > ol {
-                            display: inline;
+                            // display: inline;
+                            max-height: 1000px;
                         }
 
                         a.nav-link {
@@ -183,7 +188,7 @@ body:not(.top-nav) {
                             border-left: 0 !important;
                         }
 
-                        > a.nav-link.nav-dropdown-toggle:before {
+                        > a.nav-link.nav-dropdown-toggle::before {
                             -webkit-transform: rotate(-90deg);
                             transform: rotate(-90deg);
                         }
@@ -191,6 +196,54 @@ body:not(.top-nav) {
                         .nav-dropdown.open {
                             border-left: 0;
                         }
+                    }
+                    &.nt {
+                        transition: 0s !important;
+                        > ul, > ol {
+                            transition: 0s !important;
+                        }
+                        a.nav-link {
+                            &.nav-dropdown-toggle {
+
+                                &::before {
+                                    transition: 0s !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                a.nav-label {
+                    display: block;
+                    padding: ( $sidebar-nav-link-padding-y / 8 ) $sidebar-nav-link-padding-x;
+                    color: $sidebar-nav-title-color;
+
+                    &:hover {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+                    i {
+                        width: 20px;
+                        margin: 0 ($sidebar-nav-link-padding-x / 2) 0 0;
+                        font-size: 10px;
+                        color: $sidebar-nav-link-icon-color;
+                        text-align: center;
+                    }
+                }
+
+                @if (lightness( $sidebar-bg ) < 40) {
+                    .progress[value] {
+                        background-color: lighten($sidebar-bg, 15%) !important;
+                    }
+
+                    // Unfilled portion of the bar
+                    .progress[value]::-webkit-progress-bar {
+                        background-color: lighten($sidebar-bg, 15%) !important;
+                    }
+                    base::-moz-progress-bar, // Absurd-but-syntactically-valid selector to make these styles Firefox-only
+                    .progress[value] {
+                        background-color: lighten($sidebar-bg, 15%) !important;
                     }
                 }
             }
@@ -234,7 +287,7 @@ body:not(.top-nav) {
 
                         &.nav-dropdown-toggle {
 
-                            &:before {
+                            &::before {
                                 display: none;
                             }
                         }
