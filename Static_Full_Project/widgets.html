@@ -1,6 +1,6 @@
 <!--
  * GenesisUI - Bootstrap 4 Admin Template
- * @version v1.5.10
+ * @version v1.5.11
  * @link https://genesisui.com
  * Copyright (c) 2016 creativeLabs Łukasz Holeczek
  * @license Commercial
@@ -65,12 +65,203 @@
                     <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav pull-right hidden-md-down">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="tag tag-pill tag-danger">5</span></a>
+            <ul class="nav navbar-nav float-xs-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-bell"></i>
+                        <span class="tag tag-pill tag-danger">5</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+                        <div class="dropdown-header text-xs-center">
+                            <strong>You have 5 notifications</strong>
+                        </div>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="icon-user-follow text-success"></i> New user registered
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="icon-user-unfollow text-danger"></i> User deleted
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="icon-chart text-info"></i> Sales report is ready
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="icon-basket-loaded text-primary"></i> New client
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="icon-speedometer text-warning"></i> Server overloaded
+                        </a>
+
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Server</strong>
+                        </div>
+
+                        <a href="#" class="dropdown-item">
+                            <div class="text-uppercase mb-q">
+                                <small><b>CPU Usage</b>
+                                </small>
+                            </div>
+                            <progress class="progress progress-xs progress-info m-0" value="25" max="100">25%</progress>
+                            <small class="text-muted">348 Processes. 1/4 Cores.</small>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="text-uppercase mb-q">
+                                <small><b>Memory Usage</b>
+                                </small>
+                            </div>
+                            <progress class="progress progress-xs progress-warning m-0" value="70" max="100">70%</progress>
+                            <small class="text-muted">11444GB/16384MB</small>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="text-uppercase mb-q">
+                                <small><b>SSD 1 Usage</b>
+                                </small>
+                            </div>
+                            <progress class="progress progress-xs progress-danger m-0" value="95" max="100">95%</progress>
+                            <small class="text-muted">243GB/256GB</small>
+                        </a>
+
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-list"></i>
+                        <span class="tag tag-pill tag-warning">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+                        <div class="dropdown-header text-xs-center">
+                            <strong>You have 5 pending tasks</strong>
+                        </div>
+
+                        <a href="#" class="dropdown-item">
+                            <div class="small mb-q">Upgrade NPM &amp; Bower
+                                <span class="float-xs-right">
+                                    <strong>0%</strong>
+                                </span>
+                            </div>
+                            <progress class="progress progress-xs progress-info my-q" value="0" max="100">0%</progress>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="small mb-q">ReactJS Version
+                                <span class="float-xs-right">
+                                    <strong>25%</strong>
+                                </span>
+                            </div>
+                            <progress class="progress progress-xs progress-danger my-q" value="25" max="100">25%</progress>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="small mb-q">VueJS Version
+                                <span class="float-xs-right">
+                                    <strong>50%</strong>
+                                </span>
+                            </div>
+                            <progress class="progress progress-xs progress-warning my-q" value="50" max="100">50%</progress>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="small mb-q">Add new layouts
+                                <span class="float-xs-right">
+                                    <strong>75%</strong>
+                                </span>
+                            </div>
+                            <progress class="progress progress-xs progress-info my-q" value="75" max="100">75%</progress>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="small mb-q">Angular 2 Cli Version
+                                <span class="float-xs-right">
+                                    <strong>100%</strong>
+                                </span>
+                            </div>
+                            <progress class="progress progress-xs progress-success my-q" value="99" max="100">100%</progress>
+                        </a>
+
+                        <a href="#" class="dropdown-item text-xs-center">
+                            <strong>View all tasks</strong>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-envelope-letter"></i>
+                        <span class="tag tag-pill tag-info">7</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+                        <div class="dropdown-header text-xs-center">
+                            <strong>You have 4 messages</strong>
+                        </div>
+
+                        <a href="#" class="dropdown-item">
+                            <div class="message">
+                                <div class="py-1 mr-1 float-xs-left">
+                                    <div class="avatar">
+                                        <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status tag-success"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted">John Doe</small>
+                                    <small class="text-muted float-xs-right mt-q">Just now</small>
+                                </div>
+                                <div class="text-truncate font-weight-bold">
+                                    <span class="fa fa-exclamation text-danger"></span>Important message</div>
+                                <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="message">
+                                <div class="py-1 mr-1 float-xs-left">
+                                    <div class="avatar">
+                                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status tag-warning"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted">John Doe</small>
+                                    <small class="text-muted float-xs-right mt-q">5 minutes ago</small>
+                                </div>
+                                <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="message">
+                                <div class="py-1 mr-1 float-xs-left">
+                                    <div class="avatar">
+                                        <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status tag-danger"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted">John Doe</small>
+                                    <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                                </div>
+                                <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="message">
+                                <div class="py-1 mr-1 float-xs-left">
+                                    <div class="avatar">
+                                        <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status tag-info"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted">John Doe</small>
+                                    <small class="text-muted float-xs-right mt-q">4:03 PM</small>
+                                </div>
+                                <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="dropdown-item text-xs-center">
+                            <strong>View all messages</strong>
+                        </a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
@@ -190,9 +381,6 @@
                             <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>
                         </li>
                         <li class="nav-item">
@@ -200,6 +388,20 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="components-tabs.html"><i class="icon-puzzle"></i> Tabs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-note"></i> Forms</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms-basic-forms.html"><i class="icon-note"></i> Basic Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms-advanced-forms.html"><i class="icon-note"></i> Advanced Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms-validation.html"><i class="icon-note"></i> Validation</a>
                         </li>
                     </ul>
                 </li>
@@ -230,18 +432,21 @@
                             <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> Calendar</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="plugins-loading-buttons.html"><i class="icon-cursor"></i> Loading Buttons</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> Notifications</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> Sliders</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="plugins-spinners.html"><i class="fa fa-spinner"></i> Spinners</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> Tables</a>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="forms.html"><i class="icon-note"></i> Forms <span class="tag tag-danger">NEW</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> Widgets <span class="tag tag-info">NEW</span></a>
@@ -341,6 +546,7 @@
                     <progress class="progress progress-xs progress-danger m-0" value="95" max="100">95%</progress>
                     <small class="text-muted">243GB/256GB</small>
                 </li>
+                <li class="divider"></li>
 
             </ul>
         </nav>
@@ -440,7 +646,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card card-inverse card-primary">
                             <div class="card-block pb-0">
-                                <div class="btn-group pull-right">
+                                <div class="btn-group float-xs-right">
                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="icon-settings"></i>
                                     </button>
@@ -463,7 +669,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card card-inverse card-info">
                             <div class="card-block pb-0">
-                                <button type="button" class="btn btn-transparent active p-0 pull-right">
+                                <button type="button" class="btn btn-transparent active p-0 float-xs-right">
                                     <i class="icon-location-pin"></i>
                                 </button>
                                 <h4 class="mb-0">9.823</h4>
@@ -479,7 +685,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card card-inverse card-warning">
                             <div class="card-block pb-0">
-                                <div class="btn-group pull-right">
+                                <div class="btn-group float-xs-right">
                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="icon-settings"></i>
                                     </button>
@@ -504,7 +710,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card card-inverse card-danger">
                             <div class="card-block pb-0">
-                                <div class="btn-group pull-right">
+                                <div class="btn-group float-xs-right">
                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="icon-settings"></i>
                                     </button>
@@ -533,13 +739,13 @@
                             <div class="card-header card-header-inverse card-header-primary">
                                 <div class="font-weight-bold">
                                     <span>SALE</span>
-                                    <span class="pull-right">$1.890,65</span>
+                                    <span class="float-xs-right">$1.890,65</span>
                                 </div>
                                 <div>
                                     <span>
                                         <small>Today 6:43 AM</small>
                                     </span>
-                                    <span class="pull-right">
+                                    <span class="float-xs-right">
                                         <small>+432,50 (15,78%)</small>
                                     </span>
                                 </div>
@@ -561,7 +767,7 @@
                                     </div>
                                     <div class="col-xs-7 p-0">
                                         <div class="chart-wrapper">
-                                            <canvas class="chart-9 chart chart-bar pull-right" height="44" width="130" style="margin-top:-7px;"></canvas>
+                                            <canvas class="chart-9 chart chart-bar float-xs-right" height="44" width="130" style="margin-top:-7px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -589,13 +795,13 @@
                             <div class="card-header card-header-inverse card-header-danger">
                                 <div class="font-weight-bold">
                                     <span>SALE</span>
-                                    <span class="pull-right">$1.890,65</span>
+                                    <span class="float-xs-right">$1.890,65</span>
                                 </div>
                                 <div>
                                     <span>
                                         <small>Today 6:43 AM</small>
                                     </span>
-                                    <span class="pull-right">
+                                    <span class="float-xs-right">
                                         <small>+432,50 (15,78%)</small>
                                     </span>
                                 </div>
@@ -617,7 +823,7 @@
                                     </div>
                                     <div class="col-xs-7 p-0">
                                         <div class="chart-wrapper">
-                                            <canvas class="chart-9-2 chart chart-bar pull-right" height="44" width="130" style="margin-top:-7px;"></canvas>
+                                            <canvas class="chart-9-2 chart chart-bar float-xs-right" height="44" width="130" style="margin-top:-7px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -645,13 +851,13 @@
                             <div class="card-header card-header-inverse card-header-success">
                                 <div class="font-weight-bold">
                                     <span>SALE</span>
-                                    <span class="pull-right">$1.890,65</span>
+                                    <span class="float-xs-right">$1.890,65</span>
                                 </div>
                                 <div>
                                     <span>
                                         <small>Today 6:43 AM</small>
                                     </span>
-                                    <span class="pull-right">
+                                    <span class="float-xs-right">
                                         <small>+432,50 (15,78%)</small>
                                     </span>
                                 </div>
@@ -673,7 +879,7 @@
                                     </div>
                                     <div class="col-xs-7 p-0">
                                         <div class="chart-wrapper">
-                                            <canvas class="chart-9-3 chart chart-bar pull-right" height="44" width="130" style="margin-top:-7px;"></canvas>
+                                            <canvas class="chart-9-3 chart chart-bar float-xs-right" height="44" width="130" style="margin-top:-7px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -701,13 +907,13 @@
                             <div class="card-header card-header-inverse card-header-warning">
                                 <div class="font-weight-bold">
                                     <span>SALE</span>
-                                    <span class="pull-right">$1.890,65</span>
+                                    <span class="float-xs-right">$1.890,65</span>
                                 </div>
                                 <div>
                                     <span>
                                         <small>Today 6:43 AM</small>
                                     </span>
-                                    <span class="pull-right">
+                                    <span class="float-xs-right">
                                         <small>+432,50 (15,78%)</small>
                                     </span>
                                 </div>
@@ -729,7 +935,7 @@
                                     </div>
                                     <div class="col-xs-7 p-0">
                                         <div class="chart-wrapper">
-                                            <canvas class="chart-9-4 chart chart-bar pull-right" height="44" width="130" style="margin-top:-7px;"></canvas>
+                                            <canvas class="chart-9-4 chart chart-bar float-xs-right" height="44" width="130" style="margin-top:-7px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -931,7 +1137,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-cogs bg-primary p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-cogs bg-primary p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-primary mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -942,7 +1148,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-laptop bg-info p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-laptop bg-info p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-info mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -953,7 +1159,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-moon-o bg-warning p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-moon-o bg-warning p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-warning mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -964,7 +1170,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-bell bg-danger p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-bell bg-danger p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-danger mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -975,12 +1181,12 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-cogs bg-primary p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-cogs bg-primary p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-primary mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
                             <div class="card-footer px-1 py-h">
-                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-xs-right font-lg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -989,12 +1195,12 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-laptop bg-info p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-laptop bg-info p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-info mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
                             <div class="card-footer px-1 py-h">
-                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-xs-right font-lg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1003,12 +1209,12 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-moon-o bg-warning p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-moon-o bg-warning p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-warning mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
                             <div class="card-footer px-1 py-h">
-                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-xs-right font-lg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1017,12 +1223,12 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-1 clearfix">
-                                <i class="fa fa-bell bg-danger p-1 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-bell bg-danger p-1 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-danger mb-0 mt-h">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
                             <div class="card-footer px-1 py-h">
-                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                                <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-xs-right font-lg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1036,7 +1242,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-cogs bg-primary p-2 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-cogs bg-primary p-2 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-primary mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1047,7 +1253,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-laptop bg-info p-2 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-laptop bg-info p-2 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-info mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1058,7 +1264,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-moon-o bg-warning p-2 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-moon-o bg-warning p-2 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-warning mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1069,7 +1275,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-bell bg-danger p-2 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-bell bg-danger p-2 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-danger mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1080,7 +1286,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-cogs bg-primary p-2 px-3 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-cogs bg-primary p-2 px-3 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-primary mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1091,7 +1297,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-laptop bg-info p-2 px-3 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-laptop bg-info p-2 px-3 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-info mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1102,7 +1308,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-moon-o bg-warning p-2 px-3 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-moon-o bg-warning p-2 px-3 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-warning mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1113,7 +1319,7 @@
                     <div class="col-xxs-12 col-xs-6 col-lg-3">
                         <div class="card">
                             <div class="card-block p-0 clearfix">
-                                <i class="fa fa-bell bg-danger p-2 px-3 font-2xl mr-1 pull-left"></i>
+                                <i class="fa fa-bell bg-danger p-2 px-3 font-2xl mr-1 float-xs-left"></i>
                                 <div class="h5 text-danger mb-0 pt-1">$1.999,50</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-xs">Income</div>
                             </div>
@@ -1415,7 +1621,7 @@
                             </div>
                             <div class="card-footer">
                                 <strong>$11.234,00</strong>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-o-up text-success"></i> 15%</span>
+                                <span class="float-xs-right"><i class="fa fa-arrow-circle-o-up text-success"></i> 15%</span>
                             </div>
                         </div>
                     </div>
@@ -1431,7 +1637,7 @@
                             </div>
                             <div class="card-footer">
                                 <strong>$11.234,00</strong>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-o-down text-danger"></i> -25%</span>
+                                <span class="float-xs-right"><i class="fa fa-arrow-circle-o-down text-danger"></i> -25%</span>
                             </div>
                         </div>
                     </div>
@@ -1447,7 +1653,7 @@
                             </div>
                             <div class="card-footer">
                                 <strong>4%</strong>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-o-up text-success"></i> -87%</span>
+                                <span class="float-xs-right"><i class="fa fa-arrow-circle-o-up text-success"></i> -87%</span>
                             </div>
                         </div>
                     </div>
@@ -1463,7 +1669,7 @@
                             </div>
                             <div class="card-footer">
                                 <strong>1239</strong>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-o-up text-success"></i> 117%</span>
+                                <span class="float-xs-right"><i class="fa fa-arrow-circle-o-up text-success"></i> 117%</span>
                             </div>
                         </div>
                     </div>
@@ -1477,16 +1683,16 @@
                                 <div class="card-block py-1 pb-0">
                                     <ul class="list-unstyled mb-0">
                                         <li class="py-h">Overall
-                                            <span class="font-weight-bold pull-right">987.123</span>
+                                            <span class="font-weight-bold float-xs-right">987.123</span>
                                         </li>
                                         <li class="py-h">This week
-                                            <span class="font-weight-bold pull-right">9.873</span>
+                                            <span class="font-weight-bold float-xs-right">9.873</span>
                                         </li>
                                         <li class="py-h">Yestarday
-                                            <span class="font-weight-bold pull-right">851</span>
+                                            <span class="font-weight-bold float-xs-right">851</span>
                                         </li>
                                         <li class="py-h">Today
-                                            <span class="font-weight-bold pull-right">184</span>
+                                            <span class="font-weight-bold float-xs-right">184</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -1518,7 +1724,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <i class="icon-check"></i>Tasks in Progress
-                                <ul class="nav nav-tabs pull-right" role="tablist">
+                                <ul class="nav nav-tabs float-xs-right" role="tablist">
                                     <li class="nav-item">
                                         <a tab="" class="nav-link active" data-toggle="tab" href="#tasks" role="tab">Tasks</a>
                                     </li>
@@ -1709,37 +1915,37 @@
                             <div class="card-block">
 
                                 <div>Visits
-                                    <span class="font-weight-bold pull-right">(40% - 29.703 Users)</span>
+                                    <span class="font-weight-bold float-xs-right">(40% - 29.703 Users)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-success mt-h" value="40" max="100">40%</progress>
 
                                 <div>Unique
-                                    <span class="font-weight-bold pull-right">(20% - 24.093 Unique Users)</span>
+                                    <span class="font-weight-bold float-xs-right">(20% - 24.093 Unique Users)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-info mt-h" value="20" max="100">20%</progress>
 
                                 <div>Pageviews
-                                    <span class="font-weight-bold pull-right">(60% - 78.706 Views)</span>
+                                    <span class="font-weight-bold float-xs-right">(60% - 78.706 Views)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-warning mt-h" value="60" max="100">60%</progress>
 
                                 <div>New Users
-                                    <span class="font-weight-bold pull-right">(80% - 22.123 Users)</span>
+                                    <span class="font-weight-bold float-xs-right">(80% - 22.123 Users)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-danger mt-h" value="80" max="100">80%</progress>
 
                                 <div>Bounce Rate
-                                    <span class="font-weight-bold pull-right">(40.15%)</span>
+                                    <span class="font-weight-bold float-xs-right">(40.15%)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-success mt-h" value="40" max="100">40%</progress>
 
                                 <div>Visits
-                                    <span class="font-weight-bold pull-right">(40% - 29.703 Users)</span>
+                                    <span class="font-weight-bold float-xs-right">(40% - 29.703 Users)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-success mt-h" value="40" max="100">40%</progress>
 
                                 <div>Unique
-                                    <span class="font-weight-bold pull-right">(20% - 24.093 Unique Users)</span>
+                                    <span class="font-weight-bold float-xs-right">(20% - 24.093 Unique Users)</span>
                                 </div>
                                 <progress class="progress progress-sm progress-info mt-h" value="20" max="100">20%</progress>
 
@@ -1867,7 +2073,7 @@
             </div>
             <div class="tab-pane p-1" id="messages" role="tabpanel">
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 pull-left">
+                    <div class="py-1 pb-3 mr-1 float-xs-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                             <span class="avatar-status tag-success"></span>
@@ -1875,14 +2081,14 @@
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted pull-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 pull-left">
+                    <div class="py-1 pb-3 mr-1 float-xs-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                             <span class="avatar-status tag-success"></span>
@@ -1890,14 +2096,14 @@
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted pull-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 pull-left">
+                    <div class="py-1 pb-3 mr-1 float-xs-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                             <span class="avatar-status tag-success"></span>
@@ -1905,14 +2111,14 @@
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted pull-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 pull-left">
+                    <div class="py-1 pb-3 mr-1 float-xs-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                             <span class="avatar-status tag-success"></span>
@@ -1920,14 +2126,14 @@
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted pull-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 pull-left">
+                    <div class="py-1 pb-3 mr-1 float-xs-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                             <span class="avatar-status tag-success"></span>
@@ -1935,7 +2141,7 @@
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted pull-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
@@ -1948,7 +2154,7 @@
                     <div class="clearfix mt-2">
                         <small><b>Option 1</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
                             <input type="checkbox" class="switch-input" checked="">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -1963,7 +2169,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 2</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
                             <input type="checkbox" class="switch-input">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -1978,7 +2184,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 3</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
                             <input type="checkbox" class="switch-input">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -1990,7 +2196,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 4</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
                             <input type="checkbox" class="switch-input" checked="">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -2037,7 +2243,7 @@
         <span class="text-left">
             <a href="https://genesisui.com">Root</a> © 2016 creativeLabs.
         </span>
-        <span class="pull-right">
+        <span class="float-xs-right">
             Powered by <a href="https://genesisui.com">GenesisUI</a>
         </span>
     </footer>
