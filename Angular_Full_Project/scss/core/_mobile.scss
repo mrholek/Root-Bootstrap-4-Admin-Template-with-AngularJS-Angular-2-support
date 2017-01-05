@@ -31,6 +31,13 @@
             width: 100% !important;
             margin: 0 auto !important;
         }
+
+        .navbar-nav {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            height: inherit;
+        }
     }
 
     .sidebar {

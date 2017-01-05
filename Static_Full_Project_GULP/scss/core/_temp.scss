@@ -21,17 +21,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-chevron-up:before {
+.glyphicon-chevron-up::before {
     content: "\f077";
 }
-.glyphicon-chevron-down:before {
+.glyphicon-chevron-down::before {
     content: "\f078";
 }
-.glyphicon-chevron-left:before {
-  content: "\f053";
+.glyphicon-chevron-left::before {
+    content: "\f053";
 }
-.glyphicon-chevron-right:before {
-  content: "\f054";
+.glyphicon-chevron-right::before {
+    content: "\f054";
 }
 
 .well.well-sm.bg-faded {

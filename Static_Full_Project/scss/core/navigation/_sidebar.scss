@@ -272,9 +272,9 @@ body:not(.top-nav) {
                 }
 
                 li.nav-item {
-                    border-left: 0 !important;
-                    overflow: hidden;
                     width: $sidebar-compact-width;
+                    overflow: hidden;
+                    border-left: 0 !important;
 
                     ul {
                         background: $sidebar-bg;
@@ -367,8 +367,8 @@ body:not(.top-nav) {
                         }
 
                         > ul, > ol {
-                            max-height: 10000px;
                             display: inline;
+                            max-height: 10000px;
                             transition: 0s;
 
                             li {

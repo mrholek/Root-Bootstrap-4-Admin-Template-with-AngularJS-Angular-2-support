@@ -17,8 +17,8 @@
                 <a class="nav-link" href="#">Settings</a>
             </li>
         </ul>
-        <ul class="nav navbar-nav float-xs-right hidden-md-down">
-            <li class="nav-item dropdown" dropdown (onToggle)="toggled($event)">
+        <ul class="nav navbar-nav float-xs-right">
+            <li class="nav-item dropdown hidden-md-down" dropdown (onToggle)="toggled($event)">
                 <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle [addToggleClass]="false">
                     <i class="icon-bell"></i>
                     <span class="tag tag-pill tag-danger">5</span>
@@ -76,7 +76,7 @@
 
                 </div>
             </li>
-            <li class="nav-item dropdown" dropdown (onToggle)="toggled($event)">
+            <li class="nav-item dropdown hidden-md-down" dropdown (onToggle)="toggled($event)">
                 <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle [addToggleClass]="false">
                     <i class="icon-list"></i>
                     <span class="tag tag-pill tag-warning">15</span>
@@ -133,7 +133,7 @@
                     </a>
                 </div>
             </li>
-            <li class="nav-item dropdown" dropdown (onToggle)="toggled($event)">
+            <li class="nav-item dropdown hidden-md-down" dropdown (onToggle)="toggled($event)">
                 <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle [addToggleClass]="false">
                     <i class="icon-envelope-letter"></i>
                     <span class="tag tag-pill tag-info">7</span>
@@ -215,7 +215,7 @@
                     </a>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item hidden-md-down">
                 <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
             </li>
             <li class="nav-item dropdown" dropdown (onToggle)="toggled($event)">
@@ -247,7 +247,7 @@
                     <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item hidden-md-down">
                 <a class="nav-link navbar-toggler aside-toggle" href="#">&#9776;</a>
             </li>
         </ul>
@@ -329,6 +329,9 @@
                         <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/forms']"><i class="icon-puzzle"></i> Forms</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/modals']"><i class="icon-puzzle"></i> Modals</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" routerLinkActive="active" [routerLink]="['/components/switches']"><i class="icon-puzzle"></i> Switches</a>
                     </li>
                     <li class="nav-item">
@@ -378,6 +381,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" routerLinkActive="active" [routerLink]="['/plugins/datatable']"><i class="icon-menu"></i> DataTable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="['/plugins/draggable-cards']"><i class="icon-cursor-move"></i> Draggable Cards</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" routerLinkActive="active" [routerLink]="['/plugins/loading-buttons']"><i class="icon-cursor"></i> Loading Buttons</a>

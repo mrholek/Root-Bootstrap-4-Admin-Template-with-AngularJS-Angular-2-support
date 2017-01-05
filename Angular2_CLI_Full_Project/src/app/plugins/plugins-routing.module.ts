@@ -18,6 +18,10 @@ const routes: Routes = [
                 loadChildren: 'app/plugins/datatable/datatable.module#DatatableInitModule'
             },
             {
+                path: 'draggable-cards',
+                loadChildren: 'app/plugins/draggable-cards/draggable-cards.module#DraggableCardsModule'
+            },
+            {
                 path: 'loading-buttons',
                 loadChildren: 'app/plugins/loading-buttons/loading-buttons.module#LoadingButtonsModule'
             },

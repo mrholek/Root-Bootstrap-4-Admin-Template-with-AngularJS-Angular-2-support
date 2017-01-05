@@ -257,3 +257,14 @@
 .card-group {
     margin-bottom: 1.5 * $spacer-y;
 }
+
+.card {
+    &.drag, .drag {
+        cursor: move;
+    }
+}
+
+.card-placeholder {
+    background: rgba(0,0,0,.025);
+    border: 1px dashed $gray-light;
+}

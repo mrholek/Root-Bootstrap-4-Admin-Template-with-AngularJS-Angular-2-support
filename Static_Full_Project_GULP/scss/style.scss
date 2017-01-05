@@ -1,6 +1,6 @@
 /**
  * GenesisUI - Bootstrap 4 Admin Template
- * @version v1.5.11
+ * @version v1.5.13
  * @link https://genesisui.com
  * Copyright (c) 2016 creativeLabs Łukasz Holeczek
  * @license Commercial
@@ -59,6 +59,7 @@
 
 // Components w/ JavaScript
 @import "bootstrap_src/modal";
+    @import "bootstrap_custom/modal";
 @import "bootstrap_src/tooltip";
 @import "bootstrap_src/popover";
 @import "bootstrap_src/carousel";

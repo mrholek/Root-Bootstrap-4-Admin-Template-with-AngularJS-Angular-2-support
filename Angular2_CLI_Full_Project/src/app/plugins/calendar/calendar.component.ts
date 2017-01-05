@@ -1,15 +1,18 @@
 import { Component }        from '@angular/core';
 
-import { startOfDay,
-         subDays,
-         addDays,
-         endOfMonth,
-         isSameDay,
-         isSameMonth,
-         addWeeks,
-         subWeeks,
-         addMonths,
-         subMonths }        from 'date-fns';
+import {
+  startOfDay,
+  subDays,
+  addDays,
+  endOfMonth,
+  isSameDay,
+  isSameMonth,
+  addWeeks,
+  subWeeks,
+  addMonths,
+  subMonths,
+  addHours
+} from 'date-fns';
 
 import { CalendarEvent,
          CalendarEventAction } from 'angular-calendar'; // import should be from `angular-calendar` in your app

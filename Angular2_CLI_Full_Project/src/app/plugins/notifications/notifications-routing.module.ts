@@ -9,7 +9,7 @@ const routes: Routes = [
         path: '',
         component: NotificationsComponent,
         data: {
-            title: 'Plugins'
+            title: 'Notifications'
         }
     }
 ];

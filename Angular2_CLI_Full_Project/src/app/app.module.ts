@@ -4,7 +4,8 @@ import { LocationStrategy,
          HashLocationStrategy }         from '@angular/common';
 
 import { AppComponent }                 from './app.component';
-import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
+import { DropdownModule }               from 'ng2-bootstrap/dropdown';
+import { TabsModule }                   from 'ng2-bootstrap/tabs';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
 
 import { ChartsModule }                 from 'ng2-charts/ng2-charts';
@@ -24,7 +25,8 @@ import { SimpleLayoutComponent }        from './layouts/simple-layout.component'
     imports: [
         BrowserModule,
         AppRoutingModule,
-        Ng2BootstrapModule,
+        DropdownModule.forRoot(),
+        TabsModule.forRoot(),
         ChartsModule
     ],
     declarations: [

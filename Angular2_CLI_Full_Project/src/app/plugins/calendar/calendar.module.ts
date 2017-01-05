@@ -7,7 +7,7 @@ import { CalendarModule }           from 'angular-calendar';
 import { CalendarComponent }        from './calendar.component';
 
 //Routing
-import { CalendarRoutingModule }     from './calendar-routing.module';
+import { CalendarRoutingModule }    from './calendar-routing.module';
 //
 @NgModule({
     imports: [

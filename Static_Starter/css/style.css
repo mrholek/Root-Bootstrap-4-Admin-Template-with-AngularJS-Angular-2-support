@@ -1,6 +1,6 @@
 /**
  * GenesisUI - Bootstrap 4 Admin Template
- * @version v1.5.11
+ * @version v1.5.13
  * @link https://genesisui.com
  * Copyright (c) 2016 creativeLabs Łukasz Holeczek
  * @license Commercial
@@ -3590,6 +3590,13 @@ header.navbar .navbar-nav .nav-link {
 .card-group {
   margin-bottom: 1.5rem; }
 
+.card.drag, .card .drag {
+  cursor: move; }
+
+.card-placeholder {
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px dashed #818a91; }
+
 .breadcrumb {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -4244,6 +4251,48 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     max-width: 900px; } }
+
+.modal-primary .modal-content {
+  border-color: #20a8d8; }
+
+.modal-primary .modal-header {
+  color: #fff;
+  background-color: #20a8d8; }
+
+.modal-secondary .modal-content {
+  border-color: #d1d4d7; }
+
+.modal-secondary .modal-header {
+  color: #fff;
+  background-color: #d1d4d7; }
+
+.modal-success .modal-content {
+  border-color: #4dbd74; }
+
+.modal-success .modal-header {
+  color: #fff;
+  background-color: #4dbd74; }
+
+.modal-info .modal-content {
+  border-color: #63c2de; }
+
+.modal-info .modal-header {
+  color: #fff;
+  background-color: #63c2de; }
+
+.modal-warning .modal-content {
+  border-color: #f8cb00; }
+
+.modal-warning .modal-header {
+  color: #fff;
+  background-color: #f8cb00; }
+
+.modal-danger .modal-content {
+  border-color: #f86c6b; }
+
+.modal-danger .modal-header {
+  color: #fff;
+  background-color: #f86c6b; }
 
 .tooltip {
   position: absolute;
@@ -5969,6 +6018,28 @@ ul.ColVis_collection {
     float: left; }
   .daterangepicker .calendar.left {
     clear: none; } }
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80); }
+
+.gu-hide {
+  display: none !important; }
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important; }
+
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20); }
 
 /*!
  * FullCalendar v2.4.0 Stylesheet
@@ -9928,9 +9999,9 @@ body:not(.top-nav) .sidebar {
     body.compact-nav .sidebar ul.nav li.nav-title, body.compact-nav .sidebar ul.nav li.divider {
       display: none; }
     body.compact-nav .sidebar ul.nav li.nav-item {
-      border-left: 0 !important;
+      width: 50px;
       overflow: hidden;
-      width: 50px; }
+      border-left: 0 !important; }
       body.compact-nav .sidebar ul.nav li.nav-item ul {
         background: #2a2c36; }
       body.compact-nav .sidebar ul.nav li.nav-item a.nav-link {
@@ -9987,8 +10058,8 @@ body:not(.top-nav) .sidebar {
         body.compact-nav .sidebar ul.nav li.nav-item:hover > a.nav-link {
           width: 250px; }
         body.compact-nav .sidebar ul.nav li.nav-item:hover > ul, body.compact-nav .sidebar ul.nav li.nav-item:hover > ol {
-          max-height: 10000px;
           display: inline;
+          max-height: 10000px;
           transition: 0s; }
           body.compact-nav .sidebar ul.nav li.nav-item:hover > ul li, body.compact-nav .sidebar ul.nav li.nav-item:hover > ol li {
             width: 200px; }
@@ -12466,16 +12537,16 @@ base-chart.chart {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.glyphicon-chevron-up:before {
+.glyphicon-chevron-up::before {
   content: "\f077"; }
 
-.glyphicon-chevron-down:before {
+.glyphicon-chevron-down::before {
   content: "\f078"; }
 
-.glyphicon-chevron-left:before {
+.glyphicon-chevron-left::before {
   content: "\f053"; }
 
-.glyphicon-chevron-right:before {
+.glyphicon-chevron-right::before {
   content: "\f054"; }
 
 .well.well-sm.bg-faded .btn-sm, .well.well-sm.bg-faded .btn-group-sm > .btn, .well.well-sm.bg-faded .fc .btn-group-sm > button, .fc .well.well-sm.bg-faded .btn-group-sm > button {
@@ -12501,6 +12572,11 @@ base-chart.chart {
     header.navbar .navbar-brand {
       width: 100% !important;
       margin: 0 auto !important; }
+    header.navbar .navbar-nav {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      height: inherit; }
   .sidebar {
     left: -200px !important;
     width: 200px !important; }
