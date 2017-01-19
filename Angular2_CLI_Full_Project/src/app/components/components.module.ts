@@ -19,20 +19,20 @@ import { TabsComponent }            from './tabs.component';
 import { ComponentsRoutingModule }  from './components-routing.module';
 
 @NgModule({
-    imports: [
-        ComponentsRoutingModule,
-        ModalModule.forRoot(),
-        TabsModule
-    ],
-    declarations: [
-        ButtonsComponent,
-        CardsComponent,
-        FormsComponent,
-        ModalsComponent,
-        SocialButtonsComponent,
-        SwitchesComponent,
-        TablesComponent,
-        TabsComponent
-    ]
+  imports: [
+    ComponentsRoutingModule,
+    ModalModule.forRoot(),
+    TabsModule
+  ],
+  declarations: [
+    ButtonsComponent,
+    CardsComponent,
+    FormsComponent,
+    ModalsComponent,
+    SocialButtonsComponent,
+    SwitchesComponent,
+    TablesComponent,
+    TabsComponent
+  ]
 })
 export class ComponentsModule { }

@@ -39,9 +39,9 @@
 	-->
 
 <body class="navbar-fixed">
-    <header class="navbar">
+    <header class="app-header navbar">
         <div class="container-fluid">
-            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">&#9776;</button>
             <a class="navbar-brand" href="#"></a>
             <ul class="nav navbar-nav hidden-md-down">
 
@@ -55,15 +55,15 @@
                     <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav float-xs-right">
+            <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item dropdown hidden-md-down">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-bell"></i>
-                        <span class="tag tag-pill tag-danger">5</span>
+                        <span class="badge badge-pill badge-danger">5</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>You have 5 notifications</strong>
                         </div>
 
@@ -83,7 +83,7 @@
                             <i class="icon-speedometer text-warning"></i> Server overloaded
                         </a>
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>Server</strong>
                         </div>
 
@@ -117,17 +117,17 @@
                 <li class="nav-item dropdown hidden-md-down">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-list"></i>
-                        <span class="tag tag-pill tag-warning">15</span>
+                        <span class="badge badge-pill badge-warning">15</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>You have 5 pending tasks</strong>
                         </div>
 
                         <a href="#" class="dropdown-item">
                             <div class="small mb-q">Upgrade NPM &amp; Bower
-                                <span class="float-xs-right">
+                                <span class="float-right">
                                     <strong>0%</strong>
                                 </span>
                             </div>
@@ -135,7 +135,7 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="small mb-q">ReactJS Version
-                                <span class="float-xs-right">
+                                <span class="float-right">
                                     <strong>25%</strong>
                                 </span>
                             </div>
@@ -143,7 +143,7 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="small mb-q">VueJS Version
-                                <span class="float-xs-right">
+                                <span class="float-right">
                                     <strong>50%</strong>
                                 </span>
                             </div>
@@ -151,7 +151,7 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="small mb-q">Add new layouts
-                                <span class="float-xs-right">
+                                <span class="float-right">
                                     <strong>75%</strong>
                                 </span>
                             </div>
@@ -159,14 +159,14 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="small mb-q">Angular 2 Cli Version
-                                <span class="float-xs-right">
+                                <span class="float-right">
                                     <strong>100%</strong>
                                 </span>
                             </div>
                             <progress class="progress progress-xs progress-success my-q" value="99" max="100">100%</progress>
                         </a>
 
-                        <a href="#" class="dropdown-item text-xs-center">
+                        <a href="#" class="dropdown-item text-center">
                             <strong>View all tasks</strong>
                         </a>
                     </div>
@@ -174,25 +174,25 @@
                 <li class="nav-item dropdown hidden-md-down">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-envelope-letter"></i>
-                        <span class="tag tag-pill tag-info">7</span>
+                        <span class="badge badge-pill badge-info">7</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>You have 4 messages</strong>
                         </div>
 
                         <a href="#" class="dropdown-item">
                             <div class="message">
-                                <div class="py-1 mr-1 float-xs-left">
+                                <div class="py-1 mr-1 float-left">
                                     <div class="avatar">
                                         <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                                        <span class="avatar-status tag-success"></span>
+                                        <span class="avatar-status badge-success"></span>
                                     </div>
                                 </div>
                                 <div>
                                     <small class="text-muted">John Doe</small>
-                                    <small class="text-muted float-xs-right mt-q">Just now</small>
+                                    <small class="text-muted float-right mt-q">Just now</small>
                                 </div>
                                 <div class="text-truncate font-weight-bold">
                                     <span class="fa fa-exclamation text-danger"></span>Important message</div>
@@ -201,15 +201,15 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="message">
-                                <div class="py-1 mr-1 float-xs-left">
+                                <div class="py-1 mr-1 float-left">
                                     <div class="avatar">
                                         <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                                        <span class="avatar-status tag-warning"></span>
+                                        <span class="avatar-status badge-warning"></span>
                                     </div>
                                 </div>
                                 <div>
                                     <small class="text-muted">John Doe</small>
-                                    <small class="text-muted float-xs-right mt-q">5 minutes ago</small>
+                                    <small class="text-muted float-right mt-q">5 minutes ago</small>
                                 </div>
                                 <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                                 <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
@@ -217,15 +217,15 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="message">
-                                <div class="py-1 mr-1 float-xs-left">
+                                <div class="py-1 mr-1 float-left">
                                     <div class="avatar">
                                         <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                                        <span class="avatar-status tag-danger"></span>
+                                        <span class="avatar-status badge-danger"></span>
                                     </div>
                                 </div>
                                 <div>
                                     <small class="text-muted">John Doe</small>
-                                    <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                                    <small class="text-muted float-right mt-q">1:52 PM</small>
                                 </div>
                                 <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                                 <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
@@ -233,22 +233,22 @@
                         </a>
                         <a href="#" class="dropdown-item">
                             <div class="message">
-                                <div class="py-1 mr-1 float-xs-left">
+                                <div class="py-1 mr-1 float-left">
                                     <div class="avatar">
                                         <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                                        <span class="avatar-status tag-info"></span>
+                                        <span class="avatar-status badge-info"></span>
                                     </div>
                                 </div>
                                 <div>
                                     <small class="text-muted">John Doe</small>
-                                    <small class="text-muted float-xs-right mt-q">4:03 PM</small>
+                                    <small class="text-muted float-right mt-q">4:03 PM</small>
                                 </div>
                                 <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                                 <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
                             </div>
                         </a>
 
-                        <a href="#" class="dropdown-item text-xs-center">
+                        <a href="#" class="dropdown-item text-center">
                             <strong>View all messages</strong>
                         </a>
                     </div>
@@ -263,30 +263,30 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>Account</strong>
                         </div>
 
-                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="tag tag-info">42</span></a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="tag tag-success">42</span></a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="tag tag-danger">42</span></a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="tag tag-warning">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>
 
-                        <div class="dropdown-header text-xs-center">
+                        <div class="dropdown-header text-center">
                             <strong>Settings</strong>
                         </div>
 
                         <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="tag tag-default">42</span></a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="tag tag-primary">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
                         <div class="divider"></div>
                         <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
                     </div>
                 </li>
                 <li class="nav-item hidden-md-down">
-                    <a class="nav-link aside-toggle" href="#">&#9776;</a>
+                    <a class="nav-link aside-menu-toggler" href="#">&#9776;</a>
                 </li>
 
             </ul>
@@ -336,13 +336,13 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="timeline" role="tabpanel">
-                <div class="callout m-0 py-h text-muted text-xs-center bg-faded text-uppercase">
+                <div class="callout m-0 py-h text-muted text-center bg-faded text-uppercase">
                     <small><b>Today</b>
                     </small>
                 </div>
                 <hr class="transparent mx-1 my-0">
                 <div class="callout callout-warning m-0 py-1">
-                    <div class="avatar float-xs-right">
+                    <div class="avatar float-right">
                         <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                     </div>
                     <div>Meeting with
@@ -353,7 +353,7 @@
                 </div>
                 <hr class="mx-1 my-0">
                 <div class="callout callout-info m-0 py-1">
-                    <div class="avatar float-xs-right">
+                    <div class="avatar float-right">
                         <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                     </div>
                     <div>Skype with
@@ -363,7 +363,7 @@
                     <small class="text-muted"><i class="icon-social-skype"></i>&nbsp; On-line</small>
                 </div>
                 <hr class="transparent mx-1 my-0">
-                <div class="callout m-0 py-h text-muted text-xs-center bg-faded text-uppercase">
+                <div class="callout m-0 py-h text-muted text-center bg-faded text-uppercase">
                     <small><b>Tomorrow</b>
                     </small>
                 </div>
@@ -434,75 +434,75 @@
             </div>
             <div class="tab-pane p-1" id="messages" role="tabpanel">
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 float-xs-left">
+                    <div class="py-1 pb-3 mr-1 float-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                            <span class="avatar-status tag-success"></span>
+                            <span class="avatar-status badge-success"></span>
                         </div>
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 float-xs-left">
+                    <div class="py-1 pb-3 mr-1 float-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                            <span class="avatar-status tag-success"></span>
+                            <span class="avatar-status badge-success"></span>
                         </div>
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 float-xs-left">
+                    <div class="py-1 pb-3 mr-1 float-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                            <span class="avatar-status tag-success"></span>
+                            <span class="avatar-status badge-success"></span>
                         </div>
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 float-xs-left">
+                    <div class="py-1 pb-3 mr-1 float-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                            <span class="avatar-status tag-success"></span>
+                            <span class="avatar-status badge-success"></span>
                         </div>
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                 </div>
                 <hr>
                 <div class="message">
-                    <div class="py-1 pb-3 mr-1 float-xs-left">
+                    <div class="py-1 pb-3 mr-1 float-left">
                         <div class="avatar">
                             <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                            <span class="avatar-status tag-success"></span>
+                            <span class="avatar-status badge-success"></span>
                         </div>
                     </div>
                     <div>
                         <small class="text-muted">Lukasz Holeczek</small>
-                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                        <small class="text-muted float-right mt-q">1:52 PM</small>
                     </div>
                     <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                     <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
@@ -515,7 +515,7 @@
                     <div class="clearfix mt-2">
                         <small><b>Option 1</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-right">
                             <input type="checkbox" class="switch-input" checked>
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -530,7 +530,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 2</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-right">
                             <input type="checkbox" class="switch-input">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -545,7 +545,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 3</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-right">
                             <input type="checkbox" class="switch-input">
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -557,7 +557,7 @@
                     <div class="clearfix mt-1">
                         <small><b>Option 4</b>
                         </small>
-                        <label class="switch switch-text switch-pill switch-success switch-sm float-xs-right">
+                        <label class="switch switch-text switch-pill switch-success switch-sm float-right">
                             <input type="checkbox" class="switch-input" checked>
                             <span class="switch-label" data-on="On" data-off="Off"></span>
                             <span class="switch-handle"></span>
@@ -599,11 +599,11 @@
         </div>
     </aside>
 
-    <footer class="footer">
+    <footer class="app-footer">
         <span class="text-left">
             <a href="https://genesisui.com">Root</a> &copy; 2016 creativeLabs.
         </span>
-        <span class="float-xs-right">
+        <span class="float-right">
             Powered by <a href="https://genesisui.com">GenesisUI</a>
         </span>
     </footer>

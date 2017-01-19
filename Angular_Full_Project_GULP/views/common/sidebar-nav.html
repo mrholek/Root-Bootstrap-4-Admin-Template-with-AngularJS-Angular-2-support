@@ -18,7 +18,7 @@
             </button>
             <button type="button" class="btn btn-link">
                 <i class="icon-speech"></i>
-                <span class="tag tag-warning tag-pill">5</span>
+                <span class="badge badge-warning badge-pill">5</span>
             </button>
 
             <div class="btn-group" role="group">
@@ -26,23 +26,23 @@
                     <i class="icon-user"></i>
                 </button>
                 <div class="dropdown-menu">
-                    <div class="dropdown-header text-xs-center">
+                    <div class="dropdown-header text-center">
                         <strong>{{ 'ACCOUNT' | translate }}</strong>
                     </div>
 
-                    <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> {{ 'UPDATES' | translate }}<span class="tag tag-info">42</span></a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> {{ 'MESSAGES' | translate }}<span class="tag tag-success">42</span></a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> {{ 'TASKS' | translate }}<span class="tag tag-danger">42</span></a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> {{ 'COMMENTS' | translate }}<span class="tag tag-warning">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> {{ 'UPDATES' | translate }}<span class="badge badge-info">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> {{ 'MESSAGES' | translate }}<span class="badge badge-success">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> {{ 'TASKS' | translate }}<span class="badge badge-danger">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> {{ 'COMMENTS' | translate }}<span class="badge badge-warning">42</span></a>
 
-                    <div class="dropdown-header text-xs-center">
+                    <div class="dropdown-header text-center">
                         <strong>{{ 'SETTINGS' | translate }}</strong>
                     </div>
 
                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> {{ 'PROFILE' | translate }}</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> {{ 'SETTINGS' | translate }}</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> {{ 'PAYMENTS' | translate }}<span class="tag tag-default">42</span></a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-file"></i> {{ 'PROJECTS' | translate }}<span class="tag tag-primary">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> {{ 'PAYMENTS' | translate }}<span class="badge badge-default">42</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-file"></i> {{ 'PROJECTS' | translate }}<span class="badge badge-primary">42</span></a>
                     <div class="divider"></div>
                     <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> {{ 'LOCK_ACCOUNT' | translate }}</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> {{ 'LOGOUT' | translate }}</a>
@@ -57,7 +57,7 @@
                 Dashboard
             </li>
             <li class="nav-item">
-                <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><i class="icon-speedometer"></i> {{ 'DASHBOARD' | translate }} <span class="tag tag-info">NEW</span></a>
+                <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><i class="icon-speedometer"></i> {{ 'DASHBOARD' | translate }} <span class="badge badge-info">NEW</span></a>
             </li>
 
             <li class="divider"></li>
@@ -125,10 +125,10 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" ui-sref-active="active" ui-sref="app.forms"><i class="icon-note"></i> {{ 'FORMS' | translate }} <span class="tag tag-danger">NEW</span></a>
+                <a class="nav-link" ui-sref-active="active" ui-sref="app.forms"><i class="icon-note"></i> {{ 'FORMS' | translate }} <span class="badge badge-danger">NEW</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="icon-calculator"></i> {{ 'WIDGETS' | translate }} <span class="tag tag-info">NEW</span></a>
+                <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="icon-calculator"></i> {{ 'WIDGETS' | translate }} <span class="badge badge-info">NEW</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" ui-sref-active="active" ui-sref="app.charts"><i class="icon-pie-chart"></i> {{ 'CHARTS' | translate }}</a>
@@ -199,28 +199,33 @@
             <li class="nav-title">
                 System Utilization
             </li>
-            <li class="nav-item px-1 hidden-cn">
+            <li class="nav-item px-1">
                 <div class="text-uppercase mb-q">
                     <small><b>CPU Usage</b>
                     </small>
                 </div>
-                <progress class="progress progress-xs progress-info m-0" value="25" max="100">25%</progress>
-                <small class="text-muted">348 Processes. 1/4 Cores.</small>
+                <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </li>
-            <li class="nav-item px-1 hidden-cn">
+            <li class="nav-item px-1">
                 <div class="text-uppercase mb-q">
                     <small><b>Memory Usage</b>
                     </small>
                 </div>
-                <progress class="progress progress-xs progress-warning m-0" value="70" max="100">70%</progress>
+                <div class="progress progress-xs">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <small class="text-muted">11444GB/16384MB</small>
             </li>
-            <li class="nav-item px-1 hidden-cn">
+            <li class="nav-item px-1">
                 <div class="text-uppercase mb-q">
                     <small><b>SSD 1 Usage</b>
                     </small>
                 </div>
-                <progress class="progress progress-xs progress-danger m-0" value="95" max="100">95%</progress>
+                <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <small class="text-muted">243GB/256GB</small>
             </li>
 
