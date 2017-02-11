@@ -19,6 +19,7 @@ $(function(){
 
   var options = {
     responsive: true,
+    maintainAspectRatio: false,
     legend: {
       display: false
     },
@@ -38,7 +39,6 @@ $(function(){
   };
 
   var data = {
-    maintainAspectRatio: false,
     labels: labels,
     datasets: [{
       label: 'My First dataset',
